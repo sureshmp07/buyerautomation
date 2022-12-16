@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="5" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-12-16T14:05:48 IST" name="Default suite" finished-at="2022-12-16T14:07:07 IST" duration-ms="78596">
+    <groups>
+    </groups>
+    <test started-at="2022-12-16T14:05:48 IST" name="Default test" finished-at="2022-12-16T14:07:07 IST" duration-ms="78596">
+      <class name="testing.dev.BuyerPortal_FavouritePageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3]" started-at="2022-12-16T14:05:44 IST" name="setUp" finished-at="2022-12-16T14:05:48 IST" duration-ms="3787" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setReports()[pri:0, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3]" started-at="2022-12-16T14:05:48 IST" name="setReports" finished-at="2022-12-16T14:05:48 IST" duration-ms="176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setReports -->
+        <test-method is-config="true" signature="testName(java.lang.reflect.Method)[pri:0, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3]" started-at="2022-12-16T14:05:48 IST" name="testName" finished-at="2022-12-16T14:05:48 IST" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testing.dev.BuyerPortal_FavouritePageTest.signInPageTest() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testName -->
+        <test-method signature="signInPageTest()[pri:1, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3]" started-at="2022-12-16T14:05:48 IST" name="signInPageTest" finished-at="2022-12-16T14:06:04 IST" duration-ms="15548" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInPageTest -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3]" started-at="2022-12-16T14:06:04 IST" name="tearDown" finished-at="2022-12-16T14:06:04 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=signInPageTest status=SUCCESS method=BuyerPortal_FavouritePageTest.signInPageTest()[pri:1, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="loginsearchPageTest()[pri:2, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3]" started-at="2022-12-16T14:06:04 IST" name="loginsearchPageTest" finished-at="2022-12-16T14:06:14 IST" duration-ms="10073" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginsearchPageTest -->
+        <test-method is-config="true" signature="testName(java.lang.reflect.Method)[pri:0, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3]" started-at="2022-12-16T14:06:04 IST" name="testName" finished-at="2022-12-16T14:06:04 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testing.dev.BuyerPortal_FavouritePageTest.loginsearchPageTest() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testName -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3]" started-at="2022-12-16T14:06:14 IST" name="tearDown" finished-at="2022-12-16T14:06:14 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginsearchPageTest status=SUCCESS method=BuyerPortal_FavouritePageTest.loginsearchPageTest()[pri:2, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="testName(java.lang.reflect.Method)[pri:0, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3]" started-at="2022-12-16T14:06:14 IST" name="testName" finished-at="2022-12-16T14:06:14 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testing.dev.BuyerPortal_FavouritePageTest.favPage1() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testName -->
+        <test-method signature="favPage1()[pri:3, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3]" started-at="2022-12-16T14:06:14 IST" name="favPage1" finished-at="2022-12-16T14:06:35 IST" duration-ms="21412" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (0f5d0e97603a43a401bf00ebff929676)] -> xpath: //div[@class="fav-btn-holder"]] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-4KADTEQ', ip: '192.168.1.8', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.100, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62450}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0f5d0e97603a43a401bf00ebff929676]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (0f5d0e97603a43a401bf00ebff929676)] -> xpath: //div[@class="fav-btn-holder"]] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-4KADTEQ', ip: '192.168.1.8', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.100, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62450}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0f5d0e97603a43a401bf00ebff929676
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at buyerportal.dev.ReusableFunction.selectCheckboxes(ReusableFunction.java:590)
+at buyerportal.dev.BuyerPortal_FavouritePage.favPage(BuyerPortal_FavouritePage.java:24)
+at testing.dev.BuyerPortal_FavouritePageTest.favPage1(BuyerPortal_FavouritePageTest.java:42)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- favPage1 -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3]" started-at="2022-12-16T14:06:35 IST" name="tearDown" finished-at="2022-12-16T14:06:36 IST" duration-ms="371" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=favPage1 status=FAILURE method=BuyerPortal_FavouritePageTest.favPage1()[pri:3, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="contactSupplier()[pri:4, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3]" started-at="2022-12-16T14:06:36 IST" name="contactSupplier" finished-at="2022-12-16T14:06:45 IST" duration-ms="9625" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contactSupplier -->
+        <test-method is-config="true" signature="testName(java.lang.reflect.Method)[pri:0, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3]" started-at="2022-12-16T14:06:36 IST" name="testName" finished-at="2022-12-16T14:06:36 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testing.dev.BuyerPortal_FavouritePageTest.contactSupplier()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testName -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3]" started-at="2022-12-16T14:06:45 IST" name="tearDown" finished-at="2022-12-16T14:06:45 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=contactSupplier status=SUCCESS method=BuyerPortal_FavouritePageTest.contactSupplier()[pri:4, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="testName(java.lang.reflect.Method)[pri:0, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3]" started-at="2022-12-16T14:06:45 IST" name="testName" finished-at="2022-12-16T14:06:45 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testing.dev.BuyerPortal_FavouritePageTest.contactSupplier1()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testName -->
+        <test-method signature="contactSupplier1()[pri:5, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3]" started-at="2022-12-16T14:06:45 IST" name="contactSupplier1" finished-at="2022-12-16T14:06:56 IST" duration-ms="10515" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contactSupplier1 -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3]" started-at="2022-12-16T14:06:56 IST" name="tearDown" finished-at="2022-12-16T14:06:56 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=contactSupplier1 status=SUCCESS method=BuyerPortal_FavouritePageTest.contactSupplier1()[pri:5, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="testName(java.lang.reflect.Method)[pri:0, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3]" started-at="2022-12-16T14:06:56 IST" name="testName" finished-at="2022-12-16T14:06:56 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testing.dev.BuyerPortal_FavouritePageTest.requestQuote() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testName -->
+        <test-method signature="requestQuote()[pri:6, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3]" started-at="2022-12-16T14:06:56 IST" name="requestQuote" finished-at="2022-12-16T14:07:06 IST" duration-ms="10433" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- requestQuote -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3]" started-at="2022-12-16T14:07:06 IST" name="tearDown" finished-at="2022-12-16T14:07:06 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=requestQuote status=SUCCESS method=BuyerPortal_FavouritePageTest.requestQuote()[pri:6, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="closeReport()[pri:0, instance:testing.dev.BuyerPortal_FavouritePageTest@dbf57b3]" started-at="2022-12-16T14:07:06 IST" name="closeReport" finished-at="2022-12-16T14:07:07 IST" duration-ms="373" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeReport -->
+      </class> <!-- testing.dev.BuyerPortal_FavouritePageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
