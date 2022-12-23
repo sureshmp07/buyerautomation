@@ -105,7 +105,7 @@ public class BaseTest  {
 	
 	@BeforeSuite
 	
-	public void setUp()
+	public void setUp() throws IOException
 	{
 		
 		driverFactory=new DriverFactory();

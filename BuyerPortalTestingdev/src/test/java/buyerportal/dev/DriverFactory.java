@@ -39,7 +39,7 @@ public class DriverFactory {
 //			options. addArguments("--disable-web-security");
 //			options.addArguments("--user-data-dir=C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data");
 //			options. addArguments("--allow-running-insecure-content");
-			options. addArguments("--headless");
+			options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
 			WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver(options);  
 		    break;
@@ -71,27 +71,41 @@ public class DriverFactory {
 		return 0;
 	}
 
-	public  Properties readproperty()
+//public void  readproperty() throws IOException
+	public  Properties readproperty() throws IOException
 	{
-		File file1=new File("./ConfigurationProperties/config.properties");
-		FileInputStream fis=null;
-		try {
-			fis=new FileInputStream(file1);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		File file1=new File("./ConfigurationProperties/config.properties");
+//		FileInputStream fis=null;
+//		try {
+//			fis=new FileInputStream(file1);
+//		} catch (FileNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		 properties=new Properties();
+		//
+		 if(!System.getProperty("os.name").startsWith("Windows")){
+				
+				FileInputStream ip = new FileInputStream(System.getProperty("user.dir") + File.separator +
+						"ws" + File.separator + "ConfigurationProperties" + File.separator + "config.properties");
+				properties.load(ip);
+				}else{
+					FileInputStream ip = new FileInputStream(System.getProperty("user.dir") + File.separator +
+							"ConfigurationProperties" + File.separator + "config.properties");
+					properties.load(ip);
+//		try {
+//			properties.load(fis);
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		
 		
-		try {
-			properties.load(fis);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+				
+	//return properties ;
+				
+	}
+		return properties;	
 		
-		
-		return properties ;
-		
-	}	
+}
 }
