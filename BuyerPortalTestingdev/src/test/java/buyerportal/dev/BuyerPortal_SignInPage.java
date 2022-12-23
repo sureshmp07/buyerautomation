@@ -46,14 +46,16 @@ public class BuyerPortal_SignInPage {
 	public void signIn1(String name1,String name2)
 	{
 		
-    reusable.clicking(close);	
-    reusable.click(logout);	
-	reusable.click(signin);;
+	
+	reusable.click(signin);
 	//reusable.click(googlelogin);
 	reusable.insertText(email,name1);
 	reusable.insertText(password,name2);
 	reusable.click(checkboxclick);
 	reusable.click(signinbutton);
+	
+	reusable.clicking(close);
+	reusable.click(logout);
 //	try {
 //		Thread.sleep(5000);
 //	} catch (InterruptedException e) {

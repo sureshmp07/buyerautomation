@@ -80,6 +80,7 @@ public class BaseTest  {
 	public BuyerPortal_ProductComparePage ProductComparePage;
 	public BuyerPortal_FavouritePage FavouritePage ; 
 	public BuyerPortal_BusinessOnboardingPage businessPage ;
+	public BuyerPortal_ProfileUpdate profilepage;
 	
 	public static String classname=null;
 	public static String testname;
@@ -124,6 +125,7 @@ public class BaseTest  {
 	   ProductComparePage=new BuyerPortal_ProductComparePage(driver);
 	   FavouritePage=new BuyerPortal_FavouritePage(driver);
 	   businessPage=new BuyerPortal_BusinessOnboardingPage(driver);
+	   profilepage=new BuyerPortal_ProfileUpdate(driver);
 	   
 	   landinpage=new BuyerPortal_LandingPage(driver);
 	   searchpage=new BuyerPortal_searchPage1(driver);

@@ -23,6 +23,8 @@ import java.util.StringTokenizer;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.hc.client5.http.classic.methods.HttpGet;
+import org.apache.hc.client5.http.impl.classic.HttpClientBuilder;
 import org.apache.poi.sl.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DataFormatter;
@@ -54,6 +56,7 @@ import org.testng.annotations.DataProvider;
 import com.aventstack.extentreports.Status;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 
+import io.github.bonigarcia.wdm.online.HttpClient;
 import testing.dev.BaseTest;
 
 
@@ -182,12 +185,7 @@ public static  File file;
 	//click by  javascript
 	public boolean click(By locator) 
 	{
-	try {
-		Thread.sleep(3000);
-	} catch (InterruptedException e1) {
-		// TODO Auto-generated catch block
-		e1.printStackTrace();
-	}
+	
 	boolean result=false;
 	int attempts=0;
 	while(attempts<2) {
@@ -496,9 +494,16 @@ rb.keyRelease(KeyEvent.VK_ENTER);
 }
 //inserting new text	
 	public void insertText(By locator, String value) {
-		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-		driver.findElement(locator).sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE),value);
-		childtest.log(Status.PASS,"entered :"+value);
+		try {
+			driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+			driver.findElement(locator).sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE),value);
+			childtest.log(Status.PASS,"entered :"+value);
+			System.out.println(value);
+		} catch (Exception e) {
+			System.out.println("text not entered");
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 //		WebElement field = driver.findElement(locator);
 //		field.clear();
 //		field.sendKeys(value);
@@ -779,15 +784,6 @@ for (int i=1; i<=listofItems.size(); i++)
 //		
 //		
 	
-	
-		
-//		public void assertion(String expected,String actual)throws IOException
-//		{
-//			if(actual.equalsIgnoreCase(expected)) {
-//				 childTest.log
-//				
-//			}
-	
 	 public static String captureScreenShot(WebDriver driver)throws IOException {
 
 		 TakesScreenshot tks=(TakesScreenshot)driver;
@@ -961,7 +957,82 @@ JavascriptExecutor js = (JavascriptExecutor) driver;
 js.executeScript("window.history.go(-1)");
   
 }
+//image is displayed on page  
+public void imageDisplayed(By locator) {
+	WebElement element = driver.findElement(locator);
 
+// Javascript executor to check image
+Boolean p = (Boolean) ((JavascriptExecutor)driver) .executeScript("return arguments[0].complete " + "&& typeof arguments[0].naturalWidth != \"undefined\" " + "&& arguments[0].naturalWidth > 0", element);
 
+//verify if status is true
+if (p) {
+   System.out.println("image is present");
+} else {
+   System.out.println("image is not present");
 }
+}
+//broken image method 1
+//public void brokenImage1(By locator) {
+//try{
+//	
+//List<WebElement> image_list = driver.findElements(locator);
+///* Print the total number of images on the page */
+//System.out.println("The page under test has " + image_list.size() + " images");
+//for (WebElement img : image_list)
+//{
+//    if (img != null)
+//    {
+//        HttpClient client = HttpClientBuilder.create().build();
+//        HttpGet request = new HttpGet(img.getAttribute("src"));
+//        HttpResponse response = client.execute(request);
+//        /* For valid images, the HttpStatus will be 200 */
+//        if (response.getStatusLine().getStatusCode() != 200)
+//        {
+//            System.out.println(img.getAttribute("outerHTML") + " is broken.");
+//            iBrokenImageCount++;
+//        }
+//    }
+//}
+//}
+//catch (Exception e)
+//{
+//e.printStackTrace();
+//status = "failed";
+//System.out.println(e.getMessage());
+//}
+//status = "passed";
+//System.out.println("The page " + URL + " has " + iBrokenImageCount + " broken images");
+//}
+//}
 
+//broken image method 2
+//public void brokenImage2(By locator) {
+//try
+//{
+//    
+//    List<WebElement> image_list = driver.findElements(By.tagName("img"));
+//    /* Print the total number of images on the page */
+//    System.out.println("The page under test has " + image_list.size() + " images");
+//    for (WebElement img : image_list)
+//    {
+//        if (img != null)
+//        {
+//            if (img.getAttribute("naturalWidth").equals("0"))
+//            {
+//                System.out.println(img.getAttribute("outerHTML") + " is broken.");
+//                iBrokenImageCount++;
+//            }
+//        }
+//    }
+//}
+//catch (Exception e)
+//{
+//    e.printStackTrace();
+//    status = "failed";
+//    System.out.println(e.getMessage());
+//}
+//status = "passed";
+//System.out.println("The page " + URL + " has " + iBrokenImageCount + " broken images");
+//}
+//}
+}

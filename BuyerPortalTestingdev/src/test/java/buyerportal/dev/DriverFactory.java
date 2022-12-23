@@ -15,6 +15,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -23,7 +24,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
 
 public class DriverFactory {
 	WebDriver driver;
@@ -34,7 +34,12 @@ public class DriverFactory {
 		  
 		  switch(properties.getProperty("browsername").toUpperCase()) {
 		  case"CHROME":
-			WebDriverManager.chromedriver().setup(); 
+			
+			//ChromeOptions options = new ChromeOptions();
+//			options. addArguments("--disable-web-security");
+//			options.addArguments("--user-data-dir=C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data");
+//			options. addArguments("--allow-running-insecure-content");		
+			WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver();  
 		    break;
 		  case"EDGE":
@@ -58,6 +63,11 @@ public class DriverFactory {
 	  driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	 // driver.manage().deleteAllCookies();
 	  return driver;
+	}
+
+	private int ChromeProfile(String string) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	public  Properties readproperty()

@@ -19,7 +19,8 @@ public class BuyerPortal_SignUp {
     private By fb_pass=By.xpath("//input[@id=\"pass\"]");
     private By fb_submit=By.xpath("//button[@name=\"login\"]");
     
-    private By logouticon=By.xpath("(//div[@class=\"MuiListItemIcon-root css-1ddsiuw-MuiListItemIcon-root\"])[9]");
+    
+    private By logouticon=By.xpath("//*[local-name()='svg' and @data-testid=\"LogoutIcon\"]");
     private By logout=By.xpath("//p[text()='Ok']");
     
     private By googlelogin=By.xpath("//p[text()='Continue with Google']");
@@ -40,6 +41,7 @@ public class BuyerPortal_SignUp {
 	private By password=By.xpath("//input[@name='password']");
 	private By continuebutton=By.xpath("//p[text()='Continue']");
 	
+	private By expected_fb=By.xpath("//span[text()='S04 - 3 Seater']");
 	private By expected=By.xpath("//div[text()='Email address already exists with another user account']");
 	private By expected_f=By.xpath("//div[text()='First Name is required']");
 	private By expected_l=By.xpath("//div[text()='Last Name is required']");
@@ -51,7 +53,7 @@ public class BuyerPortal_SignUp {
 	private By expected_privacy=By.xpath("//div[text()='Password is required']");
 	
 	
-	private By close=By.xpath("//*[local-name()='svg' and @data-testid=\"LogoutIcon\"]");
+	private By close=By.xpath("//*[local-name()='svg' and @class=\"float-right cursor-pointer\"]");
 	
 	private By signupasbusiness=By.xpath("//div[text()='Sign up as a Business ']");
 	private By companyname=By.xpath("//input[@name='company_name']");
@@ -74,7 +76,7 @@ public class BuyerPortal_SignUp {
 		
 	    reusable=new ReusableFunction(this.driver);
 		}
-	public void fbsignUp(String mail,String pass,String name1,String name2,String name3) throws IOException
+	public void fbsignUp(String mail,String pass,String name1,String name2,String name3,String name4) throws IOException, InterruptedException
 	{
 	reusable.click(joinus);
 	
@@ -90,7 +92,9 @@ public class BuyerPortal_SignUp {
 	reusable.insertText(fb_email,mail);
 	reusable.insertText(fb_pass,pass);
 	reusable.click(fb_submit);
-	reusable.clicking(close);
+	Thread.sleep(5000);
+	reusable.assertion1(expected_fb, name4);
+	reusable.clicking(logouticon);
 	reusable.click(logout);
     }
 	
@@ -110,7 +114,7 @@ public class BuyerPortal_SignUp {
 	reusable.insertText(fb_email,mail);
 	reusable.insertText(fb_pass,pass);
 	reusable.click(fb_submit);
-	reusable.click(close);
+	reusable.clicking(close);
 	reusable.click(logout);
     }
 	
@@ -123,7 +127,7 @@ public class BuyerPortal_SignUp {
 	Thread.sleep(3000);
 	reusable.insertText(google_pass,pass);
 	reusable.click(google_next);
-	reusable.click(logouticon);
+	reusable.click(close);
 	reusable.click(logout);
     }
 	
@@ -139,7 +143,7 @@ public class BuyerPortal_SignUp {
 	reusable.insertText(password,name5);
 	reusable.click(continuebutton);
 	Thread.sleep(3000);
-	reusable .assertion(expected, name6);
+	reusable.assertion(expected, name6);
 	reusable.clicking(close);	
     }
 	public void signUp01(String name1,String name2,String name3,String name4,String name5,String name6) throws InterruptedException, IOException
@@ -153,7 +157,7 @@ public class BuyerPortal_SignUp {
 	reusable.insertText(password,name5);
 	reusable.click(continuebutton);
 	Thread.sleep(3000);
-	reusable .assertion(expected1, name6);
+	reusable.assertion(expected1, name6);
 	reusable.clicking(close);	
     }
 	public void signUp02(String name1,String name2,String name3,String name4,String name5,String name6) throws InterruptedException, IOException

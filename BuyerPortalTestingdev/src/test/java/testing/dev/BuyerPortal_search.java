@@ -94,23 +94,7 @@ public class BuyerPortal_search extends BaseTest{
 //  			e.printStackTrace();
 //  		}
 	}
-	@Test	(enabled=false)
-	public void profileUpdate()
-	
-	{
-		
-		  buyerprofileupdate.profileUpdate(properties.getProperty("update_firstname"), properties.getProperty("update_lasttname"), properties.getProperty("update_mobile"), properties.getProperty("email"), properties.getProperty("addnew_firstname"), properties.getProperty("addnew_lastname"), properties.getProperty("designation"),properties.getProperty("update_mobilecode"));
-     	  //String expectedtext = "Apollo Table (Worldwide)";
-          WebElement actualtext = driver.findElement(By.xpath("//div[text()='User already exists']"));
-          ReusableFunction.elementIsVisible(actualtext);
-//          try {
-//  			ReusableFunction.assertion(expectedtext, actualtext);
-//  		} catch (IOException e) {
-//  			// TODO Auto-generated catch block
-//  			e.printStackTrace();
-//  		}
-//  	   
-	}
+
 //	@Test	(priority=7)
 //	public void businessBuyer()
 //	
