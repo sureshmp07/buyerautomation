@@ -35,12 +35,13 @@ public class DriverFactory {
 		  switch(properties.getProperty("browsername").toUpperCase()) {
 		  case"CHROME":
 			
-			//ChromeOptions options = new ChromeOptions();
+			ChromeOptions options = new ChromeOptions();
 //			options. addArguments("--disable-web-security");
 //			options.addArguments("--user-data-dir=C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data");
-//			options. addArguments("--allow-running-insecure-content");		
+//			options. addArguments("--allow-running-insecure-content");
+			options. addArguments("--headless");
 			WebDriverManager.chromedriver().setup();
-			driver=new ChromeDriver();  
+			driver=new ChromeDriver(options);  
 		    break;
 		  case"EDGE":
 			WebDriverManager.edgedriver().setup();
