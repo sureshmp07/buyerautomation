@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite thread-count="1" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="1" parallel="tests" name="Test1(failed)">
     <classes>
-      <class name="testing.dev.BuyerPortal_ProfileTest">
+      <class name="testing.dev.BuyerPortal_LandingPagetest">
         <methods>
           <include name="testName"/>
           <include name="tearDown"/>
+          <include name="footer1"/>
+          <include name="popularSearch"/>
+          <include name="testimonials"/>
+          <include name="searchpage"/>
           <include name="closeReport"/>
           <include name="setUp"/>
-          <include name="profilepage"/>
+          <include name="signInPageTest"/>
+          <include name="categories"/>
           <include name="setReports"/>
         </methods>
-      </class> <!-- testing.dev.BuyerPortal_ProfileTest -->
+      </class> <!-- testing.dev.BuyerPortal_LandingPagetest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Suite] -->

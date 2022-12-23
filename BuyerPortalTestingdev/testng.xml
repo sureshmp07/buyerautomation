@@ -7,17 +7,5 @@
       <class name="testing.dev.BuyerPortal_LandingPagetest"/>
     </classes>
   </test> <!-- Test -->
-  <test  name="Test2">
-    <classes>
-      
-      <class name="testing.dev.BuyerPortalSignUpTest"/>
-      
-    </classes>
-  </test> <!-- Test -->
-  <test name="Test3">
-    <classes>
-      <class name="testing.dev.BuyerPortal_search"/>
-      
-    </classes>
-  </test> <!-- Test -->
+  
 </suite> <!-- Suite -->
