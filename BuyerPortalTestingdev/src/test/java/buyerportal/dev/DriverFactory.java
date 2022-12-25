@@ -84,7 +84,7 @@ public class DriverFactory {
 		 if(!System.getProperty("os.name").startsWith("Windows")){
 				
 				FileInputStream ip = new FileInputStream(System.getProperty("user.dir") + File.separator +
-						"ws" + File.separator + "ConfigurationProperties" + File.separator + "config.properties");
+			    File.separator + "ConfigurationProperties" + File.separator + "config.properties");
 				properties.load(ip);
 				}else{
 					FileInputStream ip = new FileInputStream(System.getProperty("user.dir") + File.separator +
