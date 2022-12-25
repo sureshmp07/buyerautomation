@@ -834,11 +834,11 @@ for (int i=1; i<=listofItems.size(); i++)
 	}
 		 
 }
-   //scrolldown
+   //scrolldown to bottom
    public void scrollDown(WebDriver driver) {
 	   JavascriptExecutor j = (JavascriptExecutor)driver;
 	   j.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-	   //j.executeScript("window.scrollBy(0,-500)");
+	  
 		 
 }
  //switching to parent window  
@@ -862,6 +862,7 @@ driver.switchTo().window(al.get(index));
 System.out.println(driver.switchTo().window(al.get(index)).getTitle());
 }
 
+//getting text
 public static String getText() {
 	
 	String text=null;
@@ -890,11 +891,12 @@ option.click();
 System.out.println(option.getText());
 }
 }
+
 public void findElementsss(By locator) 
 {	
 driver.findElement(locator).sendKeys("+358");	
 }
-
+//selecting dropdown valus from up
 public void arrowUp(By locator) {
 	
 try {
@@ -905,7 +907,7 @@ driver.findElement(locator).sendKeys(Keys.ENTER);
 e.printStackTrace();
 }
 }
-
+//selecting dropdown valus from down
 public  void arrowdown (By locator) {
 	
 try {
@@ -916,6 +918,7 @@ driver.findElement(locator).sendKeys(Keys.ENTER);
 e.printStackTrace();
 }
 }
+
 public  void multipleArrowDown (By locator) {
 	
 try {
@@ -935,7 +938,7 @@ driver.findElement(locator).sendKeys(Keys.ENTER);
 e.printStackTrace();
 }
 }
-  //selecting all check box
+ //selecting all check box
 public  void allcheckboxselect (By locator) {
 List <WebElement> AllCheckboxes =  driver.findElements(locator);
   
@@ -959,12 +962,10 @@ js.executeScript("window.history.go(-1)");
 }
 //image is displayed on page  
 public void imageDisplayed(By locator) {
-	WebElement element = driver.findElement(locator);
 
-// Javascript executor to check image
+WebElement element = driver.findElement(locator);
 Boolean p = (Boolean) ((JavascriptExecutor)driver) .executeScript("return arguments[0].complete " + "&& typeof arguments[0].naturalWidth != \"undefined\" " + "&& arguments[0].naturalWidth > 0", element);
 
-//verify if status is true
 if (p) {
    System.out.println("image is present");
 } else {

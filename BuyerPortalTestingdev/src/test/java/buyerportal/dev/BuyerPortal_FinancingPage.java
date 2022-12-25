@@ -22,8 +22,9 @@ public class BuyerPortal_FinancingPage {
 
 	public void favPage() throws InterruptedException
 	{   
-		reusable.selectCheckboxes(favoriteicon);
+		reusable.selectCheckboxes(companylogo);
 		Thread.sleep(2000);
-		reusable.click(pagination);
+		reusable.click(companylogo);
 		Thread.sleep(2000);
+}
 }

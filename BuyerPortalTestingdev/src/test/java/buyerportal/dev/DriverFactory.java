@@ -66,10 +66,7 @@ public class DriverFactory {
 	  return driver;
 	}
 
-	private int ChromeProfile(String string) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	
 
 //public void  readproperty() throws IOException
 	public  Properties readproperty() throws IOException
