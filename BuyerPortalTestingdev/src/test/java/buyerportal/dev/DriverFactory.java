@@ -42,7 +42,7 @@ public class DriverFactory {
 		
 			options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
 			WebDriverManager.chromedriver().setup();
-			driver=new ChromeDriver();  
+			driver=new ChromeDriver(options);  
 		    break;
 		  case"EDGE":
 			WebDriverManager.edgedriver().setup();
