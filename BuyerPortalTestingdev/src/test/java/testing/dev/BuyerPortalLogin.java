@@ -13,7 +13,7 @@ public class BuyerPortalLogin extends BaseTest {
 	
 	
 	//sign up fb 
-	@Test	(priority=1)
+	@Test	(priority=1,groups = {"Sanity", "Smoke", "Regression"})
 	public void signUpPageTest1() throws IOException, InterruptedException 
 	{
 		
@@ -21,7 +21,7 @@ public class BuyerPortalLogin extends BaseTest {
 	    
 	}
 	//sign in fb
-	@Test	(priority=2)
+	@Test	(priority=2,groups = {"Sanity", "Smoke", "Regression"})
 	public void signUpPageTest2() throws IOException 
 	{
 		
@@ -29,7 +29,7 @@ public class BuyerPortalLogin extends BaseTest {
 	    
 	}
 	//sign in email
-	@Test	(priority=3)
+	@Test	(priority=3,groups = {"Sanity", "Smoke", "Regression"})
 	public void signInPageTest3() 
 	{
 		
@@ -39,7 +39,7 @@ public class BuyerPortalLogin extends BaseTest {
    
 	}
 	//sign in gmail 
-		@Test	(priority=1)
+		@Test	(enabled=false)
 		public void signInPageTest4() throws InterruptedException 
 		{
 			

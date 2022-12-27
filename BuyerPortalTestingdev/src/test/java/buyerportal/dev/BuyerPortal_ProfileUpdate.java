@@ -76,6 +76,7 @@ public class BuyerPortal_ProfileUpdate {
 		reusable.click(apply);
 		Thread.sleep(3000);
 		reusable.clicking(profile_pic_click);
+		Thread.sleep(3000);
 		reusable.click(remove);
 		reusable.click(delete);
 		
@@ -86,6 +87,7 @@ public class BuyerPortal_ProfileUpdate {
 		reusable.click(apply);
 		Thread.sleep(3000);
 		reusable.clicking(coverphoto);
+		Thread.sleep(3000);
 		reusable.click(remove);
 		reusable.click(delete);
 				

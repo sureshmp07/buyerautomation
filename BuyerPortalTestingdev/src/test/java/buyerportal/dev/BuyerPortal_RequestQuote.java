@@ -12,10 +12,10 @@ public class BuyerPortal_RequestQuote {
 
 	private By requestquote=By.xpath("//button/p[text()='Request Quote']");
 	private By companyname=By.xpath("//input[@placeholder='Company Name' and @type='text']");
-	private By quantity=By.xpath("(//input[@class='MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input'])[2]");
+	private By quantity=By.xpath("//input[@placeholder=\"Quantity\"]");
 	private By incoterms=By.xpath("//div[text()='Incoterms*']/following::div");
 	private By incotermsselect=By.xpath("//li[text()='CIF']");
-	private By destination=By.xpath("(//input[@class='MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input'])[3]");
+	private By destination=By.xpath("//input[@placeholder=\"Destination\"]");
 	private By requirements=By.xpath("//textarea[@placeholder='Type your message here']");
 	private By send1=By.xpath("//button/p[text()='Send']");
 	

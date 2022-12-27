@@ -103,7 +103,7 @@ public class BaseTest  {
 	
 	
 	
-	@BeforeSuite
+	@BeforeSuite(groups = { "Smoke", "Regression", "Sanity" })
 	
 	public void setUp() throws IOException
 	{
@@ -178,7 +178,7 @@ public class BaseTest  {
 //		  return driver;
 //		
 //	}
-	@BeforeTest
+	@BeforeTest(groups = { "Smoke", "Regression", "Sanity" })
 	public void setReports() throws IOException
 	{
 		classname=getClass().getSimpleName();
@@ -197,7 +197,7 @@ public class BaseTest  {
 		
 		
 	}
-	@BeforeMethod
+	@BeforeMethod(groups = { "Smoke", "Regression", "Sanity" })
 	public void testName(Method method) {
 		testname=method.getName();
 		System.out.println("Testcase is: "+testname);
@@ -206,7 +206,7 @@ public class BaseTest  {
 	}
 
 	
-	@AfterMethod
+	@AfterMethod(groups = { "Smoke", "Regression", "Sanity" })
 	public void tearDown(ITestResult result) throws IOException
 	{
 //		if(result.getStatus()==ITestResult.FAILURE)
@@ -244,7 +244,7 @@ public class BaseTest  {
 		
 		
 	}
-	@AfterTest
+	@AfterTest(groups = { "Smoke", "Regression", "Sanity" })
 	public static void closeReport()
 	{
 		

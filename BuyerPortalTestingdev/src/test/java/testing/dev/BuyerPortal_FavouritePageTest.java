@@ -42,7 +42,7 @@ public void favPage1() throws InterruptedException
 	FavouritePage.favPage();   
 	}
 	 @Test	(priority=4)
-		public void contactSupplier()
+		public void contactSupplier() throws InterruptedException
 		
 		{
 			
@@ -50,7 +50,7 @@ public void favPage1() throws InterruptedException
 	    	
 		}
 		@Test	(priority=5)
-		public void contactSupplier1()
+		public void contactSupplier1() throws InterruptedException
 		
 		{
 			

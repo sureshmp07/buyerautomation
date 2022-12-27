@@ -11,15 +11,15 @@ public class BuyerPortal_ProductDetail {
 	private ReusableFunction reusable;
 	
 	private By contactsupplier =By.xpath("//p[text()='Contact Supplier']");
-	private By enquiry=By.xpath("//div[@class='MuiFormControl-root mt-5 mb-5 w-full css-1nrlq1o-MuiFormControl-root']");
+	private By enquiry=By.xpath("//label[text()='Select']/following::div[@role=\"button\"]");
 	private By individual=By.xpath("//li[text()='Individual']");
 	private By business=By.xpath("//li[text()='Business']");
-	private By message=By.xpath("//textarea[@class='MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputMultiline css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input']");
+	private By message=By.xpath("//textarea[@placeholder=\"Type your message here\"]");
 	private By send=By.xpath("//p[text()='Send']");
 	
-	private By company=By.xpath("(//input[@class='MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input'])[1]");
+	private By company=By.xpath("//input[@placeholder=\"Company Name\"]");
 	private By countryclick=By.xpath("//input[@id='custom-input-demo']");
-	private By taxid=By.xpath("(//input[@class='MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input'])[2]");
+	private By taxid=By.xpath("//input[@placeholder=\"Tax ID\"]");
 	
 	public BuyerPortal_ProductDetail(WebDriver driver) {
 		this.driver=driver;
@@ -27,16 +27,16 @@ public class BuyerPortal_ProductDetail {
 		}
 	
 
-	public void contactSupplier(String name1,String name2)
+	public void contactSupplier(String name1,String name2) throws InterruptedException
 	{
 	reusable.click(contactsupplier);
 	reusable.clicking(enquiry);
 	reusable.click(individual);
     reusable.insertText(message, name2);
     reusable.click(send);
-	
+	Thread.sleep(3000);
 }
-	public void contactSupplier1(String name1,String name2,String name3,String name4,String name5)
+	public void contactSupplier1(String name1,String name2,String name3,String name4,String name5) throws InterruptedException
 	{
 	reusable.click(contactsupplier);
 	reusable.clicking(enquiry);
@@ -48,7 +48,7 @@ public class BuyerPortal_ProductDetail {
 	reusable.insertText(taxid, name4);
     reusable.insertText(message, name5);
     reusable.click(send);
-	
+	Thread.sleep(2000);
 }
 	
 	

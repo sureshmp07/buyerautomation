@@ -23,15 +23,16 @@ public class BuyerPortal_LandingPage {
 	private By categoriesleft=By.xpath("(//div[@class=\"left-arrow-category cursor-pointer\"])[1]");
 	private By categoriesright=By.xpath("(//div[@class=\"right-arrow-category cursor-pointer\"])[1]");
 	
-	private By packagingclick=By.xpath("//div[text()=\"Packaging\"]");
-	private By textileclick=By.xpath("//div[text()=\"Textiles\"]");
-	private By KitchenAppliancesclick=By.xpath("//div[text()=\"Kitchen Appliances\"]");
-	private By Agricultureclick=By.xpath("//div[text()=\"Agriculture\"]");
-	private By Wellnessclick=By.xpath("//div[text()=\"Wellness\"]");
+	private By food_and_beverageclick=By.xpath("//div[text()='Food and Beverage']");
+	private By textileclick=By.xpath("(//div[text()=\"Textiles\"])[2]");
+	private By chemicalsclick=By.xpath("(//div[text()=\"Chemicals\"])[2]");
+	private By Agricultureclick=By.xpath("(//div[text()=\"Agriculture\"])[2]");
+	private By machineryclick=By.xpath("(//div[text()=\"Machinery\"])[2]");
 	
 	private By testimonialsleft=By.xpath("(//div[@class=\"left-arrow-category cursor-pointer\"])[2]");
 	private By testimonialsright=By.xpath("(//div[@class=\"right-arrow-category cursor-pointer\"])[2]");
 	
+	private By expandclick=By.xpath("//*[local-name()='svg' and @data-testid=\"ExpandMoreIcon\"]");
 	private By connect=By.xpath("//span[text()='Connect']");
 	private By protect=By.xpath("//span[text()='Protect']");
 	private By Finance=By.xpath("//span[text()='Finance']");
@@ -48,7 +49,7 @@ public class BuyerPortal_LandingPage {
 	
 	private By linkedin=By.xpath("(//*[local-name()='svg' and @class=\"cursor-pointer\" ])[3]");
 	
-	private By twitter=By.xpath("(//*[local-name()='svg' and @class=\"cursor-pointer\" ])[4]");
+	private By twitter=By.xpath("	");
 	private By youtibe=By.xpath("(//*[local-name()='svg' and @class=\"cursor-pointer\" ])[5]");
 	private By fb=By.xpath("(//*[local-name()='svg' and @class=\"cursor-pointer\" ])[6]");
 	
@@ -115,9 +116,11 @@ public class BuyerPortal_LandingPage {
 		
 		public void landingpage2() throws InterruptedException 
 		{		
+		reusable.scrollByVisibilityOfElement(categoriesright);
 		reusable.click(categoriesright);
+		Thread.sleep(2000);
 		reusable.click(categoriesleft);
-		reusable.click(packagingclick);
+		reusable.click(food_and_beverageclick);
 		Thread.sleep(2000);
 		reusable.scrollDown(driver);
 		Thread.sleep(2000);
@@ -127,7 +130,7 @@ public class BuyerPortal_LandingPage {
 		reusable.scrollDown(driver);
 		Thread.sleep(2000);
 		reusable.navigate(driver);
-		reusable.click(KitchenAppliancesclick);
+		reusable.click(chemicalsclick);
 		Thread.sleep(2000);
 		reusable.scrollDown(driver);
 		Thread.sleep(2000);
@@ -137,7 +140,7 @@ public class BuyerPortal_LandingPage {
 		reusable.scrollDown(driver);
 		Thread.sleep(2000);
 		reusable.navigate(driver);
-		reusable.click(Wellnessclick);
+		reusable.click(machineryclick);
 		Thread.sleep(2000);
 		reusable.scrollDown(driver);
 		reusable.navigate(driver);
@@ -152,7 +155,8 @@ public class BuyerPortal_LandingPage {
 		}
 		public void footer() throws InterruptedException, IOException
 		{
-			
+			reusable.scrollByVisibilityOfElement(expandclick);
+			reusable.click(expandclick);
 			reusable.click(connect);
 			reusable.switchTo(connect1, 1);
 			Thread.sleep(2000);

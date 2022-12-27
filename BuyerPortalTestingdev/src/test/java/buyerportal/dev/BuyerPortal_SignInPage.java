@@ -15,7 +15,7 @@ public class BuyerPortal_SignInPage {
 	//private By joinusnow =By.xpath("//span[text()='Join us now']");
 	private By signin=By.xpath("//div[text()='Sign In']");
 	private By googlelogin=By.xpath("//p[text()='Continue with Google']");
-	private By email=By.xpath("//input[@class='MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input']");
+	private By email=By.xpath("//input[@placeholder=\"Email ID\"]");
 	private By password=By.xpath("//input[@type='password']");
 	private By checkboxclick=By.xpath("//input[@type='checkbox']");
 	private By signinbutton=By.xpath("(//p[text()='Sign - In'])[2]");

@@ -124,6 +124,8 @@ public static  File file;
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			System.out.println("unable to perform click on : ");
+			childtest.log(Status.INFO,"unable to perform click on ");
 		}
 		}
 	
@@ -190,27 +192,42 @@ public static  File file;
 	int attempts=0;
 	while(attempts<2) {
 	
-
+		
 	try {
 	WebElement element= driver.findElement(locator);
-	String s=element.getText();
+    String s=element.getText();
 	WebDriverWait wait = new WebDriverWait(driver, 7000);
 	wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 	JavascriptExecutor js = (JavascriptExecutor)driver;
 	js.executeScript("arguments[0].click()",element);
 	childtest.log(Status.PASS,"Clicked on "+s);
-	System.out.println("Clicked on ");
+	System.out.println("Clicked on "+s);
 	result=true;
 	break;
 	} catch (Exception e) {
 				// TODO Auto-generated catch block
-	childtest.log(Status.INFO,"element not found ,unable to click on ");
+	childtest.log(Status.FAIL,"element not found ,unable to click on ");
+	System.out.println("element not found ,unable to click on ");
 	}
 	attempts++;
 	}
     return result;
 	}
-	
+	//scroll into view
+	public void scrollByVisibilityOfElement(By locator) {
+		try {
+			WebElement i = driver.findElement(locator);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].scrollIntoView();", i);
+			childtest.log(Status.PASS,"scroll into view ");
+			System.out.println("scroll into view ");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			childtest.log(Status.FAIL,"element not found ,unable to scroll into view ");
+			System.out.println("element not found ,unable to scroll into view ");
+		}
+
+	}
 	
 	//comparing actual and expected assertion
 	public String  assertion(By locator, String value) {
@@ -317,7 +334,11 @@ public static  File file;
 	 driver.switchTo().window(windowHandles.get(0));	
 	 } 
 	
-	
+	public void switchToPrevious(By locator, int value) {
+		ArrayList<String> windowHandles = new ArrayList<String> (driver.getWindowHandles());
+		driver.switchTo().window(windowHandles.get(value));
+		 driver.switchTo().window(windowHandles.get(0));	
+	}
 	
 	
 	public static String dir1(String secpath)throws IOException{
@@ -358,7 +379,9 @@ public static  File file;
 		     
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			childtest.log(Status.FAIL,"element not Displayed : "+ b);
+		      System.out.println("element not Displayed ");
+		     
 		}		
 		return b;
 	}
@@ -498,9 +521,10 @@ rb.keyRelease(KeyEvent.VK_ENTER);
 			driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 			driver.findElement(locator).sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE),value);
 			childtest.log(Status.PASS,"entered :"+value);
-			System.out.println(value);
+			System.out.println("entered :"+value);
 		} catch (Exception e) {
-			System.out.println("text not entered");
+			childtest.log(Status.FAIL,"text not entered:"+value);
+			System.out.println("text not entered"+value);
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -520,9 +544,12 @@ rb.keyRelease(KeyEvent.VK_ENTER);
 			wait=new WebDriverWait(driver, 20);
 			wait.until(ExpectedConditions.visibilityOf(element));
 			action.moveToElement(element).build().perform();
+			childtest.log(Status.PASS,"drag and drop performed ");
+			System.out.println("drag and drop performed");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			childtest.log(Status.FAIL,"drag and drop not performed");
+			System.out.println("drag and drop not performed");
 		}
 		
 		
@@ -581,26 +608,20 @@ private static WebElement identifyElement(String loctype, String locvalue) {
 public void selectCheckboxes(By locator)
 {
 	List <WebElement> listofItems = driver.findElements(locator);
-WebDriverWait wait = new WebDriverWait(driver, 20); //Wait time of 20 seconds
+    WebDriverWait wait = new WebDriverWait(driver, 20); //Wait time of 20 seconds
 
 for (int i=1; i<=listofItems.size(); i++)
 { 
-    /*Getting the list of items again so that when the page is
-     navigated back to, then the list of items will be refreshed
-     again */ 
+    
     listofItems = driver.findElements(locator);
 
-    //Waiting for the element to be visible
-    //Used (i-1) because the list's item start with 0th index, like in an array
     wait.until(ExpectedConditions.visibilityOf(listofItems.get(i-1)));
-
-    //Clicking on the first element 
+ 
     listofItems.get(i-1).click();
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    System.out.print(i + " element clicked\t--");
-    System.out.println("pass");
-   
-} }
+    System.out.print(i + " element clicked\t--"); 
+}
+}
 //	
 //	public  void downloadFile(String href, String fileName) throws Exception{
 //		URL url = null;
@@ -631,9 +652,18 @@ for (int i=1; i<=listofItems.size(); i++)
 	(new Actions(driver)).dragAndDrop(element, target).perform();
     }
     //selecting iframe
-	public void selectIFrameUsingIndex(WebDriver driver, int index) {   
+	public void selectIFrameUsingIndex(By locator, int index) {   
 		 
-	    driver.switchTo().frame(index);
+	    try {
+	    	WebElement element = driver.findElement(locator);
+			driver.switchTo().frame(index);
+			childtest.log(Status.PASS,"switched to frame");
+			System.out.println("switched to frame");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			childtest.log(Status.FAIL,"unable to switch to frame");
+			System.out.println("unable to switch to frame");
+		}
 	}
 	
 	public void selectIFrameUsingIndex( String name) {

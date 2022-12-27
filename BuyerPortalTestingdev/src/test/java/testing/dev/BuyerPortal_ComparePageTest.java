@@ -27,7 +27,7 @@ public class BuyerPortal_ComparePageTest extends BaseTest{
 		
 	}
    @Test	(priority=3)
-	public void contactSupplier()
+	public void contactSupplier() throws InterruptedException
 	
 	{
 		
@@ -35,7 +35,7 @@ public class BuyerPortal_ComparePageTest extends BaseTest{
     	
 	}
 	@Test	(priority=4)
-	public void contactSupplier1()
+	public void contactSupplier1() throws InterruptedException
 	
 	{
 		
@@ -59,7 +59,7 @@ public void compare() throws InterruptedException
  		}
 	
 @Test	(priority=7)
-	public void contactSupplier11()
+	public void contactSupplier11() throws InterruptedException
 	
 	{
 		
@@ -67,7 +67,7 @@ public void compare() throws InterruptedException
   	
 	}
 	@Test	(priority=8)
-	public void contactSupplier12()
+	public void contactSupplier12() throws InterruptedException
 	
 	{
 		

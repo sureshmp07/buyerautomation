@@ -72,7 +72,7 @@ public void search() throws InterruptedException
 //				e.printStackTrace();
 //			}
 }
-	@Test(priority=5)
+	@Test(enabled=false)
 	public void footer1() throws InterruptedException, IOException
 	
 	{
