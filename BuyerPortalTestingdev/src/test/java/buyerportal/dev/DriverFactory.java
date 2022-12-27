@@ -35,12 +35,12 @@ public class DriverFactory {
 		  switch(properties.getProperty("browsername").toUpperCase()) {
 		  case"CHROME":
 			
-			//ChromeOptions options = new ChromeOptions();
+		   ChromeOptions options = new ChromeOptions();
 //			options. addArguments("--disable-web-security");
 //			options.addArguments("--user-data-dir=C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data");
 //			options. addArguments("--allow-running-insecure-content");
 		
-			//options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
+			options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
 			WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver();  
 		    break;
