@@ -80,108 +80,64 @@ public class BuyerPortal_BusinessOnboardingPage {
 //		Thread.sleep(2000);
 		
 		reusable.click(businessbtn);
-		Thread.sleep(2000);
 		//reusable.click(companylogo);
 	//	Thread.sleep(2000);
 		reusable.clicking(changebutton);
-		Thread.sleep(2000);
 		reusable.uploadrobot( filepath);
-		Thread.sleep(2000);
 		reusable.click(applybutton);
-		Thread.sleep(2000);
 		reusable.click(coverphoto);
-		Thread.sleep(2000);
 		reusable.clicking(changebutton);
-		Thread.sleep(2000);
 		reusable.uploadrobot( filepath1);
-		Thread.sleep(2000);
 		reusable.click(applybutton);
-		Thread.sleep(2000);
 		reusable.sendkeyss(entityname,text1);
-		Thread.sleep(2000);
 		reusable.sendkeyss(countryofincorporation,text2);
 		reusable.arrowdown(countryofincorporation);
-		Thread.sleep(2000);
 		reusable.sendkeyss(CountryofOperation,text3);
 		reusable.arrowdown(CountryofOperation);
-		Thread.sleep(2000);
 		reusable.sendkeyss(tin,text1);
-		Thread.sleep(2000);
 		reusable.clicking(Registrationcheckbox);
-		Thread.sleep(2000);
 		reusable.sendkeyss(doi, text4);
-		Thread.sleep(2000);
 		reusable.sendkeyss(companywebsite, text5);
-		Thread.sleep(2000);
 		reusable.click(PrimaryIndustry);
-		Thread.sleep(2000);
 		reusable.multipleArrowDown(PrimaryIndustry);
-		Thread.sleep(2000);
 		reusable.click(nextbutton);	
-		Thread.sleep(2000);
 		reusable.assertion1(assert_ContactDetails, text6);
 	}
 	public void contactDetailsPage(String text1,String text2,String text3,String text4) throws InterruptedException, AWTException, IOException
 	{   
 
 		reusable.sendkeyss(location,text1);
-		Thread.sleep(3000);
 	    reusable.arrowdown(location);
-		Thread.sleep(2000);
 		reusable.sendkeyss(code,text2);
-		Thread.sleep(2000);
 		reusable.arrowdown(code);
-		Thread.sleep(2000);
 		reusable.sendkeyss(phone,text3);
-		Thread.sleep(2000);
 		reusable.arrowdown(phone);
-		Thread.sleep(2000);
 		reusable.click(checkbox);
-		Thread.sleep(2000);
 		reusable.click(nextbutton1);
-		Thread.sleep(2000);
 		reusable.assertion1(assert_OtherInformation, text4);
 		
 	}
 	public void OtherInformationPage(String text1,String text2,String text3,String text4,String text5,String text6,String text7,String filepath1) throws InterruptedException, AWTException
 	{
 		reusable.click(awardbutton);
-		Thread.sleep(2000);
 	    reusable.sendkeyss(awardname,text1);
-		Thread.sleep(2000);
 		reusable.sendkeyss(awardcategory,text2);
-		Thread.sleep(2000);
 		reusable.sendkeyss(awarddescription,text3);
-		Thread.sleep(2000);
 		reusable.sendkeyss(awardlinks,text4);
-		Thread.sleep(2000);
 		reusable.click(saveaward);
-		Thread.sleep(2000);
 		reusable.click(news);
-		Thread.sleep(2000);
 		reusable.sendkeyss(headline,text5);
-		Thread.sleep(2000);
 		reusable.sendkeyss(newsdescription,text6);
-		Thread.sleep(2000);
 		reusable.sendkeyss(newslink,text7);
-		Thread.sleep(2000);
 		reusable.click(savenews);
 		
-		Thread.sleep(2000);
 		reusable.click(link1);
-		Thread.sleep(2000);
 		reusable.parentWindow(0);
-		Thread.sleep(2000);
 		reusable.click(link2);
-		Thread.sleep(2000);
 		reusable.parentWindow(0);
-		Thread.sleep(2000);
 		reusable.click( attachment);
-		Thread.sleep(2000);
 		reusable.uploadrobot( filepath1);
-		Thread.sleep(2000);
 		reusable.click(designation);
-		Thread.sleep(2000);
 		reusable.click(nextbutton);
 		
 	}

@@ -25,17 +25,17 @@ public class BuyerPortal_EmcxPage {
 	public void EmcxPage() throws InterruptedException
 	{   
 		reusable.click(emcxicon);
-		Thread.sleep(2000);
+		
 		reusable.click(transact1);
-		Thread.sleep(2000);
+		
 		reusable.click(transact2);
-		Thread.sleep(2000);
+		
 		reusable.click(transact3);
-		Thread.sleep(2000);
+		
 		reusable.click(home_dropdown);
-		Thread.sleep(2000);
+		
 		reusable.click(home_dropdown);
-		Thread.sleep(2000);
+		
 		reusable.click(unitedstaes);
 				
 }

@@ -1,24 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="0" failed="0" skipped="4">
+<testng-results ignored="1" total="3" passed="0" failed="0" skipped="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-01T23:01:46 IST" name="Default suite" finished-at="2023-03-01T23:01:46 IST" duration-ms="60">
+  <suite started-at="2023-03-03T18:11:51 IST" name="Default suite" finished-at="2023-03-03T18:11:54 IST" duration-ms="2408">
     <groups>
     </groups>
-    <test started-at="2023-03-01T23:01:46 IST" name="Default test" finished-at="2023-03-01T23:01:46 IST" duration-ms="60">
-      <class name="testing.dev.BuyerPortal_BusinessOnboardingPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6973b51b]" started-at="2023-03-01T23:01:46 IST" name="setUp" finished-at="2023-03-01T23:01:46 IST" duration-ms="8" status="FAIL">
-          <exception class="java.lang.Error">
+    <test started-at="2023-03-03T18:11:51 IST" name="Default test" finished-at="2023-03-03T18:11:54 IST" duration-ms="2408">
+      <class name="testing.dev.BuyerPortalLogin">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testing.dev.BuyerPortalLogin@1afd44cb]" started-at="2023-03-03T18:11:51 IST" name="setUp" finished-at="2023-03-03T18:11:54 IST" duration-ms="2337" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
             <message>
-              <![CDATA[Unresolved compilation problem: 
-Cannot switch on a value of type String for source level below 1.7. Only convertible int values or enum variables are permitted
-]]>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=110.0.5481.178)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-4KADTEQ', ip: '192.168.210.81', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63383}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: be0fb2f30d8524c942a82bd0b36f02fb]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problem: 
-Cannot switch on a value of type String for source level below 1.7. Only convertible int values or enum variables are permitted
-
-at buyerportal.dev.DriverFactory.int_Browser(DriverFactory.java:36)
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=110.0.5481.178)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-4KADTEQ', ip: '192.168.210.81', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63383}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: be0fb2f30d8524c942a82bd0b36f02fb
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:837)
+at buyerportal.dev.DriverFactory.int_Browser(DriverFactory.java:66)
 at testing.dev.BaseTest.setUp(BaseTest.java:123)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:577)
@@ -44,30 +65,51 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setReports()[pri:0, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6973b51b]" started-at="2023-03-01T23:01:46 IST" name="setReports" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1677691906336" status="SKIP">
+        <test-method is-config="true" signature="setReports()[pri:0, instance:testing.dev.BuyerPortalLogin@1afd44cb]" started-at="2023-03-03T18:11:54 IST" name="setReports" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1677847314243" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setReports -->
-        <test-method is-config="true" signature="testName(java.lang.reflect.Method)[pri:0, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6973b51b]" started-at="2023-03-01T23:01:46 IST" name="testName" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1677691906345" status="SKIP">
+        <test-method is-config="true" signature="testName(java.lang.reflect.Method)[pri:0, instance:testing.dev.BuyerPortalLogin@1afd44cb]" started-at="2023-03-03T18:11:54 IST" name="testName" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1677847314258" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testName -->
-        <test-method signature="signInPageTest()[pri:1, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6973b51b]" started-at="2023-03-01T23:01:46 IST" name="signInPageTest" finished-at="2023-03-01T23:01:46 IST" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Error">
+        <test-method signature="signUpPageTest1()[pri:1, instance:testing.dev.BuyerPortalLogin@1afd44cb]" started-at="2023-03-03T18:11:54 IST" name="signUpPageTest1" finished-at="2023-03-03T18:11:54 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
             <message>
-              <![CDATA[Unresolved compilation problem: 
-Cannot switch on a value of type String for source level below 1.7. Only convertible int values or enum variables are permitted
-]]>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=110.0.5481.178)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-4KADTEQ', ip: '192.168.210.81', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63383}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: be0fb2f30d8524c942a82bd0b36f02fb]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problem: 
-Cannot switch on a value of type String for source level below 1.7. Only convertible int values or enum variables are permitted
-
-at buyerportal.dev.DriverFactory.int_Browser(DriverFactory.java:36)
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=110.0.5481.178)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-4KADTEQ', ip: '192.168.210.81', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63383}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: be0fb2f30d8524c942a82bd0b36f02fb
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:837)
+at buyerportal.dev.DriverFactory.int_Browser(DriverFactory.java:66)
 at testing.dev.BaseTest.setUp(BaseTest.java:123)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:577)
@@ -93,30 +135,51 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signInPageTest -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6973b51b]" started-at="2023-03-01T23:01:46 IST" name="tearDown" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1677691906349" status="SKIP">
+        </test-method> <!-- signUpPageTest1 -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testing.dev.BuyerPortalLogin@1afd44cb]" started-at="2023-03-03T18:11:54 IST" name="tearDown" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1677847314265" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="testName(java.lang.reflect.Method)[pri:0, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6973b51b]" started-at="2023-03-01T23:01:46 IST" name="testName" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1677691906352" status="SKIP">
+        <test-method is-config="true" signature="testName(java.lang.reflect.Method)[pri:0, instance:testing.dev.BuyerPortalLogin@1afd44cb]" started-at="2023-03-03T18:11:54 IST" name="testName" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1677847314269" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testName -->
-        <test-method signature="basicBusinessDetails()[pri:2, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6973b51b]" started-at="2023-03-01T23:01:46 IST" name="basicBusinessDetails" finished-at="2023-03-01T23:01:46 IST" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Error">
+        <test-method signature="signInPageTest5()[pri:3, instance:testing.dev.BuyerPortalLogin@1afd44cb]" started-at="2023-03-03T18:11:54 IST" name="signInPageTest5" finished-at="2023-03-03T18:11:54 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
             <message>
-              <![CDATA[Unresolved compilation problem: 
-Cannot switch on a value of type String for source level below 1.7. Only convertible int values or enum variables are permitted
-]]>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=110.0.5481.178)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-4KADTEQ', ip: '192.168.210.81', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63383}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: be0fb2f30d8524c942a82bd0b36f02fb]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problem: 
-Cannot switch on a value of type String for source level below 1.7. Only convertible int values or enum variables are permitted
-
-at buyerportal.dev.DriverFactory.int_Browser(DriverFactory.java:36)
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=110.0.5481.178)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-4KADTEQ', ip: '192.168.210.81', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63383}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: be0fb2f30d8524c942a82bd0b36f02fb
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:837)
+at buyerportal.dev.DriverFactory.int_Browser(DriverFactory.java:66)
 at testing.dev.BaseTest.setUp(BaseTest.java:123)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:577)
@@ -142,117 +205,19 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- basicBusinessDetails -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6973b51b]" started-at="2023-03-01T23:01:46 IST" name="tearDown" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1677691906355" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="testName(java.lang.reflect.Method)[pri:0, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6973b51b]" started-at="2023-03-01T23:01:46 IST" name="testName" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1677691906357" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testName -->
-        <test-method signature="contactDetails()[pri:3, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6973b51b]" started-at="2023-03-01T23:01:46 IST" name="contactDetails" finished-at="2023-03-01T23:01:46 IST" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Error">
-            <message>
-              <![CDATA[Unresolved compilation problem: 
-Cannot switch on a value of type String for source level below 1.7. Only convertible int values or enum variables are permitted
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problem: 
-Cannot switch on a value of type String for source level below 1.7. Only convertible int values or enum variables are permitted
-
-at buyerportal.dev.DriverFactory.int_Browser(DriverFactory.java:36)
-at testing.dev.BaseTest.setUp(BaseTest.java:123)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
-at org.testng.TestRunner.beforeRun(TestRunner.java:627)
-at org.testng.TestRunner.run(TestRunner.java:589)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- contactDetails -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6973b51b]" started-at="2023-03-01T23:01:46 IST" name="tearDown" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1677691906360" status="SKIP">
+        </test-method> <!-- signInPageTest5 -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testing.dev.BuyerPortalLogin@1afd44cb]" started-at="2023-03-03T18:11:54 IST" name="tearDown" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1677847314275" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="testName(java.lang.reflect.Method)[pri:0, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6973b51b]" started-at="2023-03-01T23:01:46 IST" name="testName" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1677691906360" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testName -->
-        <test-method signature="otherInformation()[pri:4, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6973b51b]" started-at="2023-03-01T23:01:46 IST" name="otherInformation" finished-at="2023-03-01T23:01:46 IST" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Error">
-            <message>
-              <![CDATA[Unresolved compilation problem: 
-Cannot switch on a value of type String for source level below 1.7. Only convertible int values or enum variables are permitted
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problem: 
-Cannot switch on a value of type String for source level below 1.7. Only convertible int values or enum variables are permitted
-
-at buyerportal.dev.DriverFactory.int_Browser(DriverFactory.java:36)
-at testing.dev.BaseTest.setUp(BaseTest.java:123)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
-at org.testng.TestRunner.beforeRun(TestRunner.java:627)
-at org.testng.TestRunner.run(TestRunner.java:589)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- otherInformation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6973b51b]" started-at="2023-03-01T23:01:46 IST" name="tearDown" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1677691906363" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="closeReport()[pri:0, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6973b51b]" started-at="2023-03-01T23:01:46 IST" name="closeReport" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1677691906364" status="SKIP">
+        <test-method is-config="true" signature="closeReport()[pri:0, instance:testing.dev.BuyerPortalLogin@1afd44cb]" started-at="2023-03-03T18:11:54 IST" name="closeReport" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1677847314276" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeReport -->
-      </class> <!-- testing.dev.BuyerPortal_BusinessOnboardingPageTest -->
+      </class> <!-- testing.dev.BuyerPortalLogin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

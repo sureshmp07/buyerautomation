@@ -37,29 +37,17 @@ public class BuyerPortal_LogisticsPage {
 	public void logisticsPage(String s1,String s2,String s3,String s4,String s5,String s6,String s7) throws InterruptedException
 	{
 	reusable.click(logisticsicon);
-	Thread.sleep(3000);
 	reusable.click(continueclick);
-	Thread.sleep(3000);
 	reusable.insertText(origincompany, s1);
-	Thread.sleep(3000);
 	reusable.arrowdown(origincompany);
-	Thread.sleep(3000);
 	reusable.insertText(destinationcompany, s2);
-	Thread.sleep(3000);
 	reusable.arrowdown(destinationcompany);
-	Thread.sleep(3000);
 	reusable.insertText(width, s3);
-	Thread.sleep(3000);
 	reusable.insertText(length, s4);
-	Thread.sleep(3000);
 	reusable.insertText(height, s5);
-	Thread.sleep(3000);
 	reusable.insertText(weight, s6);
-	Thread.sleep(3000);
 	reusable.insertText(shipmentdate, s7);
-	Thread.sleep(3000);
 	reusable.click(next);
-	Thread.sleep(3000);
 	reusable.click(checkrates);	
 }
 }

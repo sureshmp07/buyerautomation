@@ -55,7 +55,7 @@ public class BuyerPortal_search extends BaseTest{
 	
 	{
 		
-		  contactSupplier.contactSupplier(properties.getProperty("enquiry"),properties.getProperty("message"));
+		  contactSupplier.contactSupplier(properties.getProperty("enquiry"),properties.getProperty("message"),properties.getProperty("assertcontactsupplier"));
      	  String expectedtext = "Apollo Table (Worldwide)";
           String actualtext = driver.findElement(By.xpath("//div[text()='Apollo Table']")).getText();
 //          try {
@@ -70,7 +70,7 @@ public class BuyerPortal_search extends BaseTest{
 	
 	{
 		
-		  contactSupplier.contactSupplier1(properties.getProperty("enquiry1"),properties.getProperty("compan_name"),properties.getProperty("countryselect"),properties.getProperty("taxid"),properties.getProperty("message"));
+		  contactSupplier.contactSupplier1(properties.getProperty("enquiry1"),properties.getProperty("compan_name"),properties.getProperty("countryselect"),properties.getProperty("taxid"),properties.getProperty("message"),properties.getProperty("assertcontactsupplier"));
      	  String expectedtext = "Apollo Table (Worldwide)";
           String actualtext = driver.findElement(By.xpath("//div[text()='Apollo Table']")).getText();
 //          try {

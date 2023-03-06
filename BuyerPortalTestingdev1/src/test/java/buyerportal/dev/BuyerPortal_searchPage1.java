@@ -71,38 +71,25 @@ public class BuyerPortal_searchPage1 {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		Thread.sleep(2000);	
+		}	
 		reusable.click(searchclick);
-		Thread.sleep(5000);
 		reusable.actions(arrowright);
 	    reusable.actions(proxteraicon);
-	    Thread.sleep(2000);
 	    reusable.navigateback();
 	   
 	    //Thread.sleep(2000);
 	   // reusable.allcheckboxselect(Favouritesselect);
 	   // Thread.sleep(2000);
 		reusable.click(developerclick);
-		Thread.sleep(5000);
 	    reusable.click(developersignup);
-	    Thread.sleep(2000);
 	    reusable.navigate(driver);
-	    Thread.sleep(2000);
 	    reusable.click(developerclick);
-	    Thread.sleep(5000);
 	    reusable.click(developersignin);
-	    Thread.sleep(2000);
 	    reusable.navigate(driver);
-	    Thread.sleep(2000);
 	    reusable.click(developerclick);
-	    Thread.sleep(5000);
 	    reusable.click(developerAPI);
-	    Thread.sleep(2000);
 	    reusable.navigate(driver);
-	    Thread.sleep(2000);
 	    reusable.clickOn(partnerplatformclick);
-	    Thread.sleep(2000);
 	    reusable.clickingallelements(country);
 		Thread.sleep(2000);
 		reusable.clickingallelements(comparecheckbox);

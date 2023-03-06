@@ -47,48 +47,27 @@ public class BuyerPortal_ProfilePage {
 	public void profileUpdate(String filepath,String name1,String name2,String name3,String name4,String name5,String name6,String name7) throws InterruptedException, AWTException
 	{
 		reusable.clickOn(profileicon);
-		Thread.sleep(2000);
 		reusable.clickOn(profilepic);
-		Thread.sleep(2000);
 		reusable.uploadrobot(filepath);
-		Thread.sleep(2000);
 		reusable.clickOn(profilepic_apply);
-		Thread.sleep(5000);
 		reusable.clickOn(profilepic);
-		Thread.sleep(2000);
 		reusable.clickOn(profilepic_remove);
-		Thread.sleep(2000);
 		reusable.clickOn(profilepic_delete);
-		Thread.sleep(2000);
 		
 		reusable.clickOn(coverpic);
-		Thread.sleep(2000);
 		reusable.uploadrobot(filepath);
-		Thread.sleep(2000);
 		reusable.clickOn(coverpic_apply);
-		Thread.sleep(5000);
 		reusable.clickOn(coverpic);
-		Thread.sleep(2000);
 		reusable.clickOn(coverpic_remove);
-		Thread.sleep(2000);
 		reusable.clickOn(coverpic_delete);
-		Thread.sleep(2000);
 		reusable.insertText(firstname, name1);
-		Thread.sleep(2000);
 		reusable.insertText(lastname, name2);
-		Thread.sleep(2000);
 		reusable.insertText(designation, name3);
-		Thread.sleep(2000);
 		reusable.insertText(aboutme,name4);
-		Thread.sleep(2000);
 		reusable.insertText(countrycodeclick,name5);
-		Thread.sleep(2000);
     	reusable.arrowdown(countrycodeclick);
-    	Thread.sleep(2000);
 		reusable.insertText(contactnumber, name6);
-		Thread.sleep(2000);
 		reusable.insertText(onlinepages, name7);
-		Thread.sleep(2000);
 		reusable.click(finish);
 
 	}

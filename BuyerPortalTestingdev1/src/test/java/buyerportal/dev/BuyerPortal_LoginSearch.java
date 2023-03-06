@@ -25,10 +25,7 @@ public class BuyerPortal_LoginSearch {
 	public void loginsearch(String buyersearch) throws InterruptedException
 	{
 	reusable.insertText(search, buyersearch);
-	Thread.sleep(3000);
-	reusable.clickOn(searchclick);
-	Thread.sleep(3000);
-	
+	reusable.clickOn(searchclick);	
 	reusable.click(tableclick);
 }
 }

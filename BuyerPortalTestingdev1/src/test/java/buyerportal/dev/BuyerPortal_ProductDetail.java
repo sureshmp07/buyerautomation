@@ -17,6 +17,8 @@ public class BuyerPortal_ProductDetail {
 	private By message=By.xpath("//textarea[@placeholder=\"Type your message here\"]");
 	private By send=By.xpath("//p[text()='Send']");
 	
+	private By assertcontactsupplier=By.xpath("//div[text()='Your request has been submitted successfully']");
+	
 	private By company=By.xpath("//input[@placeholder=\"Company Name\"]");
 	private By countryclick=By.xpath("//input[@id='custom-input-demo']");
 	private By taxid=By.xpath("//input[@placeholder=\"Tax ID\"]");
@@ -27,41 +29,28 @@ public class BuyerPortal_ProductDetail {
 		}
 	
 
-	public void contactSupplier(String name1,String name2) throws InterruptedException
+	public void contactSupplier(String name1,String name2,String name3) throws InterruptedException
 	{
 	reusable.click(contactsupplier);
-	Thread.sleep(2000);
 	reusable.clicking(enquiry);
-	Thread.sleep(2000);
 	reusable.click(individual);
-	Thread.sleep(2000);
     reusable.insertText(message, name2);
-    Thread.sleep(2000);
     reusable.click(send);
-    Thread.sleep(2000);
+    reusable.assertion(assertcontactsupplier, name3);
 }
-	public void contactSupplier1(String name1,String name2,String name3,String name4,String name5) throws InterruptedException
+	public void contactSupplier1(String name1,String name2,String name3,String name4,String name5,String name6) throws InterruptedException
 	{
 	reusable.click(contactsupplier);
-	Thread.sleep(2000);
 	reusable.clicking(enquiry);
-	Thread.sleep(2000);
 	reusable.click(business);
-	Thread.sleep(2000);
 	reusable.insertText(company, name2);
-	Thread.sleep(2000);
 	reusable.clicking(countryclick);
-	Thread.sleep(2000);
 	reusable.insertText(countryclick,name3);
-	Thread.sleep(2000);
 	reusable.arrowdown(countryclick);
-	Thread.sleep(2000);
 	reusable.insertText(taxid, name4);
-	Thread.sleep(2000);
     reusable.insertText(message, name5);
-    Thread.sleep(2000);
     reusable.click(send);
-    Thread.sleep(2000);
+    reusable.assertion(assertcontactsupplier, name6);
 }
 	
 	

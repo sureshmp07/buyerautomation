@@ -16,10 +16,10 @@ import org.testng.annotations.Test;
 public class BuyerPortalSignUpTest  extends BaseTest {
 	
 	@Test	(priority=1)
-	public void signUpPageTest1() throws IOException 
+	public void signUpPageTest1() throws IOException, InterruptedException 
 	{
 		
-		signup.fbsignUp(properties.getProperty("fb_email"),properties.getProperty("fb_pass"),properties.getProperty("commercial"),properties.getProperty("terms"),properties.getProperty("privacy"));
+		signup.fbsignUp(properties.getProperty("fb_email"),properties.getProperty("fb_pass"),properties.getProperty("commercial"),properties.getProperty("terms"),properties.getProperty("privacy"),properties.getProperty("assertfb"));
 	    
 	}
 	
@@ -42,7 +42,7 @@ public class BuyerPortalSignUpTest  extends BaseTest {
 	
 	//without entering username and password
 	@Test	(priority=3)
-	public void signUpPageTest4() throws IOException 
+	public void signUpPageTest4() throws IOException, InterruptedException 
 	{
 		
 		signup.signUp1(properties.getProperty("buy_email"),properties.getProperty("l_email2"),properties.getProperty("l_password2"),properties.getProperty("actual_f"),properties.getProperty("actual_l"),properties.getProperty("actual_u"),properties.getProperty("actual_p"));

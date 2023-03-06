@@ -46,7 +46,7 @@ public void favPage1() throws InterruptedException
 		
 		{
 			
-			  contactSupplier.contactSupplier(properties.getProperty("enquiry"),properties.getProperty("message"));
+			  contactSupplier.contactSupplier(properties.getProperty("enquiry"),properties.getProperty("message"),properties.getProperty("assertcontactsupplier"));
 	    	
 		}
 		@Test	(priority=5)
@@ -54,7 +54,7 @@ public void favPage1() throws InterruptedException
 		
 		{
 			
-			  contactSupplier.contactSupplier1(properties.getProperty("enquiry1"),properties.getProperty("compan_name"),properties.getProperty("countryselect"),properties.getProperty("taxid"),properties.getProperty("message"));
+			  contactSupplier.contactSupplier1(properties.getProperty("enquiry1"),properties.getProperty("compan_name"),properties.getProperty("countryselect"),properties.getProperty("taxid"),properties.getProperty("message"),properties.getProperty("assertcontactsupplier"));
 	    	
 		}
 		@Test	(priority=6)

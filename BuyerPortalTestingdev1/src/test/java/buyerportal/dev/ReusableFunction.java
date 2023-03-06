@@ -89,9 +89,9 @@ public static  File file;
     }
   
   //sending text  
-	public  void sendkeyss(By locator,String text)
+	public  void sendkeyss(By locator,String text) throws InterruptedException
 	{
-	
+	Thread.sleep(3000);
 	try {
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		WebElement element=findElement(locator);
@@ -110,8 +110,8 @@ public static  File file;
 	
 	
 	//click by action class
-	public void actions(By locator) {
-		
+	public void actions(By locator) throws InterruptedException {
+		Thread.sleep(3000);
 		try {
 			Actions a = new Actions(driver);
 			WebElement optionsList = driver.findElement(locator);
@@ -127,8 +127,9 @@ public static  File file;
 		}
 	
     //normal click
-	public  boolean clicking(By locator)
+	public  boolean clicking(By locator) throws InterruptedException
 	{
+		Thread.sleep(3000);
 		boolean result=false;
 		int attempts=0;
 		while(attempts<2) {
@@ -182,14 +183,11 @@ public static  File file;
 	}    
 	}
 	//click by  javascript
-	public boolean click(By locator) 
+	public boolean click(By locator) throws InterruptedException 
 	{
-	try {
-		Thread.sleep(3000);
-	} catch (InterruptedException e1) {
-		// TODO Auto-generated catch block
-		e1.printStackTrace();
-	}
+	
+    Thread.sleep(3000);
+	
 	boolean result=false;
 	int attempts=0;
 	while(attempts<2) {
@@ -208,7 +206,8 @@ public static  File file;
 	break;
 	} catch (Exception e) {
 				// TODO Auto-generated catch block
-	childtest.log(Status.INFO,"element not found ,unable to click on ");
+	childtest.log(Status.INFO,"element not found ,unable to click on");
+	System.out.println("element not found ,unable to click on");
 	}
 	attempts++;
 	}
@@ -217,8 +216,9 @@ public static  File file;
 	
 	
 	//comparing actual and expected assertion
-	public String  assertion(By locator, String value) {
-		
+	public String  assertion(By locator, String value) throws InterruptedException {
+    
+	Thread.sleep(3000);
     try {
 	WebElement click= driver.findElement(locator);
     String s=click.getText();
@@ -227,12 +227,13 @@ public static  File file;
   // String	expectedUrl = driver.getCurrentUrl();
 	Assert.assertEquals(s, value);
 	childtest.log(Status.PASS,"text verified "+s);
+	System.out.println("text verified :"+s);
 	} catch (Exception e) {
 		 	
 		
 	// TODO Auto-generated catch block
 	childtest.log(Status.FAIL,"text not verified ");
-	
+	System.out.println("text not verified");
 	}
     return value;
     }
@@ -292,8 +293,10 @@ public static  File file;
 	}
 	
 	//move to next window 
-	public void switchTo(By locator, int value)
+	public void switchTo(By locator, int value) throws InterruptedException
+	
 	{
+	Thread.sleep(3000);
 	driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
 	ArrayList<String> windowHandles = new ArrayList<String> (driver.getWindowHandles());
 	driver.switchTo().window(windowHandles.get(value));
@@ -418,11 +421,11 @@ public   void assertion11 (By locator) throws IOException, InterruptedException{
 	
 }
 	//assertion
-	public   void assertion1(By locator, String expected) throws IOException{
+	public   void assertion1(By locator, String expected) throws IOException, InterruptedException{
 		
 //		WebDriverWait wait = new WebDriverWait(driver, 7000);
 //		  wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-		
+		Thread.sleep(3000);
 			WebElement ac= driver.findElement(locator);
 			String actual=ac.getText();
 			WebDriverWait wait = new WebDriverWait(driver, 7000);
@@ -479,6 +482,7 @@ public  void uploadrobot(String text) throws InterruptedException, AWTException
 //Thread.sleep(2000); // suspending execution for specified time period
 
 // creating object of Robot class
+	Thread.sleep(3000);
 Robot rb = new Robot();
 
 // copying File path to Clipboard
@@ -498,13 +502,19 @@ rb.keyPress(KeyEvent.VK_ENTER);
 rb.keyRelease(KeyEvent.VK_ENTER);
 }
 //inserting new text	
-	public void insertText(By locator, String value) {
-		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-		driver.findElement(locator).sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE),value);
-		childtest.log(Status.PASS,"entered :"+value);
-//		WebElement field = driver.findElement(locator);
-//		field.clear();
-//		field.sendKeys(value);
+	public void insertText(By locator, String value) throws InterruptedException {
+		Thread.sleep(3000);
+		try {
+			driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+			driver.findElement(locator).sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE),value);
+			childtest.log(Status.PASS,"text entered :"+value);
+			System.out.println("text entered :"+value);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			childtest.log(Status.FAIL,"text not entered :"+value);
+			System.out.println("text not entered :"+value);
+		}
 		}
 	//getting attribute value
 	public  String tooltipText( By locator){
@@ -576,8 +586,9 @@ private static WebElement identifyElement(String loctype, String locvalue) {
 //	}
 //	}
 //	
-public void selectCheckboxes(By locator)
+public void selectCheckboxes(By locator) throws InterruptedException
 {
+	Thread.sleep(3000);
 	List <WebElement> listofItems = driver.findElements(locator);
 WebDriverWait wait = new WebDriverWait(driver, 20); //Wait time of 20 seconds
 
@@ -669,8 +680,9 @@ for (int i=1; i<=listofItems.size(); i++)
 		    }
 		
 		
-			public void clickOn(By locator)
+			public void clickOn(By locator) throws InterruptedException
 			{
+				Thread.sleep(3000);
 			    try {
 					WebDriverWait wait = new WebDriverWait(driver, 30);
 					wait.until(ExpectedConditions.refreshed(
@@ -837,7 +849,8 @@ for (int i=1; i<=listofItems.size(); i++)
     
 	
 	//navigate back
-   public void navigate(WebDriver driver ) {
+   public void navigate(WebDriver driver ) throws InterruptedException {
+	   Thread.sleep(2000);
 	   try {
 		driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);  
 		driver.navigate().back();
@@ -849,14 +862,16 @@ for (int i=1; i<=listofItems.size(); i++)
 		 
 }
    //scrolldown
-   public void scrollDown(WebDriver driver) {
+   public void scrollDown(WebDriver driver) throws InterruptedException {
+	   Thread.sleep(2000);
 	   JavascriptExecutor j = (JavascriptExecutor)driver;
 	   j.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 	   //j.executeScript("window.scrollBy(0,-500)");
 		 
 }
  //switching to parent window  
-public void parentWindow(int index) {
+public void parentWindow(int index) throws InterruptedException {
+	Thread.sleep(2000);
 driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 try {
 	Thread.sleep(3000);
@@ -920,8 +935,8 @@ e.printStackTrace();
 }
 }
 
-public  void arrowdown (By locator) {
-	
+public  void arrowdown (By locator) throws InterruptedException {
+	Thread.sleep(3000);
 try {
 driver.findElement(locator).sendKeys(Keys.ARROW_DOWN);
 driver.findElement(locator).sendKeys(Keys.ENTER);
@@ -930,8 +945,8 @@ driver.findElement(locator).sendKeys(Keys.ENTER);
 e.printStackTrace();
 }
 }
-public  void multipleArrowDown (By locator) {
-	
+public  void multipleArrowDown (By locator) throws InterruptedException {
+	Thread.sleep(3000);
 try {
 driver.findElement(locator).sendKeys(Keys.ARROW_DOWN);
 driver.findElement(locator).sendKeys(Keys.ENTER);
@@ -965,8 +980,9 @@ AllCheckboxes.get(i).click();
   
   
 //navigate back using javascript executor  
-public void navigateback() {
+public void navigateback() throws InterruptedException {
 	// TODO Auto-generated method stub
+	Thread.sleep(3000);
 JavascriptExecutor js = (JavascriptExecutor) driver; 
 js.executeScript("window.history.go(-1)");
   

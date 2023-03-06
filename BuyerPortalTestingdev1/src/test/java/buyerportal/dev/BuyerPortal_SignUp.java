@@ -19,6 +19,8 @@ public class BuyerPortal_SignUp {
     private By fb_pass=By.xpath("//input[@id=\"pass\"]");
     private By fb_submit=By.xpath("//button[@name=\"login\"]");
     
+    private By assertfb=By.xpath("//span[text()='S04 - 3 Seater']");
+    
     private By logouticon=By.xpath("(//div[@class=\"MuiListItemIcon-root css-1ddsiuw-MuiListItemIcon-root\"])[9]");
     private By logout=By.xpath("//p[text()='Ok']");
     
@@ -76,27 +78,20 @@ public class BuyerPortal_SignUp {
 		
 	    reusable=new ReusableFunction(this.driver);
 		}
-	public void fbsignUp(String mail,String pass,String name1,String name2,String name3) throws IOException
+	public void fbsignUp(String mail,String pass,String name1,String name2,String name3,String name4) throws IOException, InterruptedException
 	{
 	reusable.click(joinus);
-	
-	//reusable.click(commercial);
-	//reusable.click(terms_of_use);
-	//reusable.click(Privacy);
-	
-	//reusable.assertion(expected_commercial,name1);
-	//reusable.assertion(expected_terms,name2);
-	//reusable.assertion(expected_privacy,name3);
 	
 	reusable.click(facebooklogin);
 	reusable.insertText(fb_email,mail);
 	reusable.insertText(fb_pass,pass);
 	reusable.click(fb_submit);
+	reusable.assertion(assertfb, name4);
 	reusable.clicking(close);
 	reusable.click(logout);
     }
 	
-	public void fbsignin(String mail,String pass,String name1,String name2,String name3) throws IOException
+	public void fbsignin(String mail,String pass,String name1,String name2,String name3) throws IOException, InterruptedException
 	{
 	reusable.click(signin);
 	
@@ -122,7 +117,6 @@ public class BuyerPortal_SignUp {
 	reusable.click(googlelogin);
 	reusable.insertText(google_email,mail);
 	reusable.click(google_next);
-	Thread.sleep(3000);
 	reusable.insertText(google_pass,pass);
 	reusable.click(google_next);
 	reusable.click(logouticon);
@@ -140,7 +134,6 @@ public class BuyerPortal_SignUp {
 	reusable.insertText(username, name4);
 	reusable.insertText(password,name5);
 	reusable.click(continuebutton);
-	Thread.sleep(3000);
 	reusable .assertion(expected, name6);
 	reusable.clicking(close1);	
     }
@@ -154,8 +147,7 @@ public class BuyerPortal_SignUp {
 	reusable.insertText(username, name4);
 	reusable.insertText(password,name5);
 	reusable.click(continuebutton);
-	Thread.sleep(3000);
-	reusable .assertion(expected1, name6);
+	reusable.assertion(expected1, name6);
 	reusable.clicking(close1);	
     }
 	public void signUp02(String name1,String name2,String name3,String name4,String name5,String name6) throws InterruptedException, IOException
@@ -168,12 +160,11 @@ public class BuyerPortal_SignUp {
 	reusable.insertText(username, name4);
 	reusable.insertText(password,name5);
 	reusable.click(continuebutton);
-	Thread.sleep(3000);
 	//reusable .assertion(expected2, name6);
 	reusable.clicking(close1);	
     }
 	
-	public void signUp1(String name1,String name2,String name3,String name5,String name6,String name7,String name8) throws IOException
+	public void signUp1(String name1,String name2,String name3,String name5,String name6,String name7,String name8) throws IOException, InterruptedException
 	{
     //reusable.clicking(close);	
 	reusable.click(joinus);;
@@ -192,7 +183,7 @@ public class BuyerPortal_SignUp {
 	
 }
 	
-	public void signUp2(String name1,String name2,String name3) throws IOException
+	public void signUp2(String name1,String name2,String name3) throws IOException, InterruptedException
 	{
     reusable.clicking(close1);	
 	reusable.click(joinus);

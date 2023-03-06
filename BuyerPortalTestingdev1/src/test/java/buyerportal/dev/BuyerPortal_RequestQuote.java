@@ -35,22 +35,14 @@ public class BuyerPortal_RequestQuote {
 	public void requestQuote(String companynam,String quantiti,String destinatio,String requiremnt) throws InterruptedException
 	{
 	reusable.click(requestquote);
-	Thread.sleep(2000);
 	reusable.insertText(companyname, companynam);
-	Thread.sleep(2000);
 	reusable.insertText(quantity, quantiti);
-	Thread.sleep(2000);
 	reusable.clicking(incoterms);
-	Thread.sleep(2000);
 	reusable.click(incotermsselect);
-	Thread.sleep(2000);
 	//reusable.arrowdown(incoterms);
 	reusable.insertText(destination, destinatio);
-	Thread.sleep(2000);
 	reusable.insertText(requirements, requiremnt);
-	Thread.sleep(2000);
 	reusable.click(send1);
-	Thread.sleep(2000);
 	}
 	
 }

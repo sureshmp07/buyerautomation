@@ -86,28 +86,21 @@ public class BuyerPortal_LandingPage {
 	public void landingpage(String name1) throws InterruptedException
 	{   
 		reusable.click(about);
-		Thread.sleep(2000);
 	    reusable.navigate(driver);
 		reusable.insertText(searchbox, name1);
 		reusable.click(searchclick);
-	    Thread.sleep(3000);
 		//reusable.navigate(driver);
 	}
 		public void landingpage1() throws InterruptedException 
 		{		
 		reusable.click(foodclick);
-		Thread.sleep(2000);
 		reusable.scrollDown(driver);
-		Thread.sleep(2000);
 		reusable.navigate(driver);
 		reusable.click(apparelclick);
-		Thread.sleep(2000);
 		reusable.navigate(driver);
 		reusable.click(Beautyclick);
-		Thread.sleep(2000);
 		reusable.navigate(driver);
 		reusable.click(Furnitureclick);
-		Thread.sleep(2000);
 		reusable.navigate(driver);
 		}
 		
@@ -117,27 +110,18 @@ public class BuyerPortal_LandingPage {
 		reusable.click(categoriesright);
 		reusable.click(categoriesleft);
 		reusable.click(foodandbeverage);
-		Thread.sleep(2000);
 		reusable.scrollDown(driver);
-		Thread.sleep(2000);
 		reusable.navigate(driver);
 		reusable.click(textile);
-		Thread.sleep(2000);
 		reusable.scrollDown(driver);
-		Thread.sleep(2000);
 		reusable.navigate(driver);
 		reusable.click(chemicals);
-		Thread.sleep(2000);
 		reusable.scrollDown(driver);
-		Thread.sleep(2000);
 		reusable.navigate(driver);
 		reusable.click(Agriculture);
-		Thread.sleep(2000);
 		reusable.scrollDown(driver);
-		Thread.sleep(2000);
 		reusable.navigate(driver);
 		reusable.click(machinery);
-		Thread.sleep(2000);
 		reusable.scrollDown(driver);
 		reusable.navigate(driver);
 		}
@@ -146,7 +130,6 @@ public class BuyerPortal_LandingPage {
 		{
 			
 			reusable.click(testimonialsleft);
-		    Thread.sleep(2000);
 			reusable.click(testimonialsright);
 		}
 		public void footer() throws InterruptedException, IOException
@@ -154,67 +137,45 @@ public class BuyerPortal_LandingPage {
 			
 			reusable.click(aboutus);
 			reusable.switchTo(aboutus1, 1);
-			Thread.sleep(2000);
 			reusable.scrollDown(driver);
 			reusable.click(solutions);
 		    reusable.switchTo(solutions1, 2);
-			Thread.sleep(2000);
 			reusable.click(news);
 			reusable.switchTo(news1, 3);
-			Thread.sleep(2000);
         	reusable.click(contactus);
 			reusable.switchTo(contactus1, 4);
-			Thread.sleep(2000);
 			reusable.click(sfe);
 			reusable.switchTo(sfe1, 5);
-			Thread.sleep(2000);
 			reusable.click(tradehub);
 			reusable.switchTo(tradehub1, 6);
-			Thread.sleep(2000);
 			reusable.click(tradefinancing);
 			reusable.switchTo(tradefinancing1, 7);
-			Thread.sleep(2000);
 			reusable.click(emcx);
 			reusable.switchTo(emcx1, 8);
-			Thread.sleep(2000);
 			reusable.click(ifes);
 			reusable.switchTo(ifes1, 9);
-			Thread.sleep(2000);
 			reusable.click(terms);
 			reusable.switchTo(terms1, 10);
-			Thread.sleep(2000);
 			reusable.click(PrivacyPolicy);
 			//reusable.switchTo(PrivacyPolicy1, 11);
-			Thread.sleep(2000);
 			reusable.click(faqs);
 			//reusable.switchTo(faqs1, 12);
-			Thread.sleep(2000);
-			
 			reusable.actions(linkedin);
-			Thread.sleep(5000);
 			//reusable.navigate(driver);
 			//reusable.actions(linkedinclose);
 			//reusable.switchTo(linkedin1, 14);
 			//Thread.sleep(2000);
 			reusable.actions(twitter);
 			//reusable.switchTo(twitter1, 15);
-			Thread.sleep(2000);
+		
 			reusable.actions(youtibe);
 			//reusable.switchTo(youtibe1, 13);
-			Thread.sleep(2000);
 			reusable.actions(fb);
 			//reusable.switchTo(fb1, 14);
-			Thread.sleep(2000);
-			
 		    reusable.click(termsofuse);
 			//reusable.switchTo(termsofuse1, 12);
-			Thread.sleep(2000);
 			reusable.click(privacy);
 			//reusable.switchTo(privacy1, 13);
-			Thread.sleep(2000);
-			
-		
-
 	}
 }
 

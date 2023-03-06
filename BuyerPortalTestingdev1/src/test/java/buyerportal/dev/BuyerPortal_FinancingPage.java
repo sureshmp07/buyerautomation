@@ -37,43 +37,23 @@ public class BuyerPortal_FinancingPage {
 	public void financePage(String s1,String s2,String s3,String s4,String s5,String s6,String s7,String s8,String s9) throws InterruptedException
 	{   
 		reusable.click(financelogo);
-		Thread.sleep(2000);
 		reusable.click(getfinance);
-		Thread.sleep(2000);
-		
 		reusable.insertText(mydetailsentity, s1);
-		Thread.sleep(2000);
 		reusable.insertText(taxid, s2);
-		Thread.sleep(2000);
 		reusable.click(sameastaxid);
-		Thread.sleep(2000);
 		reusable.insertText(registrationaddress, s3);
-		Thread.sleep(2000);
 		reusable.arrowdown(registrationaddress);
-		Thread.sleep(2000);
 		reusable.insertText(state, s4);
-		Thread.sleep(2000);
 		reusable.insertText(city, s5);
-		Thread.sleep(2000);
 		reusable.actions(myrole);
-		Thread.sleep(2000);
 		reusable.actions(myrole);
-		Thread.sleep(2000);
 		reusable.click(dropdownclick);
-		Thread.sleep(2000);
-		
 		reusable.insertText(counter_entityname, s6);
-		Thread.sleep(2000);
 		reusable.insertText(counter_taxid, s7);
-		Thread.sleep(2000);
 		reusable.click(counter_sameastaxid);
-		Thread.sleep(2000);
 		reusable.insertText(counter_address, s8);
-		Thread.sleep(2000);
 		reusable.arrowdown(counter_address);
-		Thread.sleep(2000);
 		reusable.insertText(counter_city,s9);
-		Thread.sleep(2000);
 		reusable.click(next);		
 	}
 	}

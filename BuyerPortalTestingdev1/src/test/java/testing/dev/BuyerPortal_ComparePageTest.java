@@ -31,7 +31,7 @@ public class BuyerPortal_ComparePageTest extends BaseTest{
 	
 	{
 		
-		  contactSupplier.contactSupplier(properties.getProperty("enquiry"),properties.getProperty("message"));
+		  contactSupplier.contactSupplier(properties.getProperty("enquiry"),properties.getProperty("message"),properties.getProperty("assertcontactsupplier"));
     	
 	}
 	@Test	(priority=4)
@@ -39,7 +39,7 @@ public class BuyerPortal_ComparePageTest extends BaseTest{
 	
 	{
 		
-		  contactSupplier.contactSupplier1(properties.getProperty("enquiry1"),properties.getProperty("compan_name"),properties.getProperty("countryselect"),properties.getProperty("taxid"),properties.getProperty("message"));
+		  contactSupplier.contactSupplier1(properties.getProperty("enquiry1"),properties.getProperty("compan_name"),properties.getProperty("countryselect"),properties.getProperty("taxid"),properties.getProperty("message"),properties.getProperty("assertcontactsupplier"));
     	
 	}
 	@Test	(priority=5)
@@ -63,7 +63,7 @@ public void compare() throws InterruptedException
 	
 	{
 		
-		  contactSupplier.contactSupplier(properties.getProperty("enquiry"),properties.getProperty("message"));
+		  contactSupplier.contactSupplier(properties.getProperty("enquiry"),properties.getProperty("message"),properties.getProperty("assertcontactsupplier"));
   	
 	}
 	@Test	(priority=8)
@@ -71,7 +71,7 @@ public void compare() throws InterruptedException
 	
 	{
 		
-		  contactSupplier.contactSupplier1(properties.getProperty("enquiry1"),properties.getProperty("compan_name"),properties.getProperty("countryselect"),properties.getProperty("taxid"),properties.getProperty("message"));
+		  contactSupplier.contactSupplier1(properties.getProperty("enquiry1"),properties.getProperty("compan_name"),properties.getProperty("countryselect"),properties.getProperty("taxid"),properties.getProperty("message"),properties.getProperty("assertcontactsupplier"));
   	
 	}
 	@Test	(priority=9)

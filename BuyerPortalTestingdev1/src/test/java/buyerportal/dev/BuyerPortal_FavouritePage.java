@@ -22,15 +22,10 @@ public class BuyerPortal_FavouritePage {
 	public void favPage() throws InterruptedException
 	{   
 		reusable.selectCheckboxes(favoriteicon);
-		Thread.sleep(2000);
 		reusable.click(pagination);
-		Thread.sleep(2000);
 		reusable.selectCheckboxes(favoriteicon);
-		Thread.sleep(2000);
 		reusable.click(favorite);
-		Thread.sleep(2000);
 		reusable.click(imageclick);
-		Thread.sleep(2000);
 		
 	}
 }

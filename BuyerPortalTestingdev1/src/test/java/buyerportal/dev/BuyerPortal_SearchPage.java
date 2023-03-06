@@ -22,7 +22,7 @@ public class BuyerPortal_SearchPage {
 		}
 	
 
-	public void search(String name)
+	public void search(String name) throws InterruptedException
 	{
 	reusable.click(profileicon);
 	reusable.click(logout);

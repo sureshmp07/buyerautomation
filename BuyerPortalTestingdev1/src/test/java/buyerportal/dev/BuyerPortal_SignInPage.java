@@ -23,6 +23,8 @@ public class BuyerPortal_SignInPage {
 	private By logout=By.xpath("//p[text()='Ok']");
 	private By assert_business=By.xpath("//span[text()='S04 - 2 Seater']");
 	
+	 private By assertsignin=By.xpath("//span[text()='S04 - 3 Seater']");
+	 
 	public BuyerPortal_SignInPage(WebDriver driver) {
 		this.driver=driver;
 	    reusable=new ReusableFunction(this.driver);
@@ -35,15 +37,13 @@ public class BuyerPortal_SignInPage {
 	reusable.insertText(email,name1);
 	reusable.insertText(password,name2);
 	reusable.click(checkboxclick);
-	reusable.click(signinbutton);
-
-   Thread.sleep(5000);
+	reusable.click(signinbutton);	
 	reusable.assertion1(assert_business,name3);
 	//reusable.click(tableclick);
    
 }
 	
-	public void signIn1(String name1,String name2)
+	public void signIn1(String name1,String name2,String name3) throws InterruptedException
 	{
 		
    
@@ -53,14 +53,8 @@ public class BuyerPortal_SignInPage {
 	reusable.insertText(password,name2);
 	reusable.click(checkboxclick);
 	reusable.click(signinbutton);
-//	try {
-//		Thread.sleep(5000);
-//	} catch (InterruptedException e) {
-//		// TODO Auto-generated catch block
-//		e.printStackTrace();
-//	}
-	//reusable.click(tableclick);
-   // reusable.click(close);
+	reusable.assertion(assertsignin, name3);
+
 }
 	
 	
