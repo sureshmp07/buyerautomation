@@ -85,8 +85,7 @@ public class BuyerPortal_LandingPage {
 
 	public void landingpage(String name1) throws InterruptedException
 	{   
-		reusable.click(about);
-	    reusable.navigate(driver);
+		
 		reusable.insertText(searchbox, name1);
 		reusable.click(searchclick);
 		//reusable.navigate(driver);

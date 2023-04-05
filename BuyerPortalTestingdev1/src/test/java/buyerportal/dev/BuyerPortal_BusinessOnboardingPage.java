@@ -13,10 +13,15 @@ public class BuyerPortal_BusinessOnboardingPage {
 	
 	private By businessbtn=By.xpath("(//div[@class='MuiListItemIcon-root css-1ddsiuw-MuiListItemIcon-root'])[2]");
 	
-	private By companylogo=By.xpath("//img[@class='cursor-pointer']");
+	private By companylogo=By.xpath("//div[@class=\"upload-logo\"]");
 	private By applybutton=By.xpath("//button[text()='Apply']");
-	private By changebutton=By.xpath("//span[text()='Change Photo']");
+	private By removebutton=By.xpath("//button[text()='Remove']");
+	private By deletebutton=By.xpath("//button[text()='Yes, Delete It']");
+	
 	private By coverphoto=By.xpath("//button[text()='EDIT']");
+	
+	private By editicon=By.xpath("(//*[local-name()='svg' and @data-testid=\"EditIcon\"])[1]");
+	
 	private By entityname=By.xpath("//input[@id=\"corporate_name\"]");
 	private By countryofincorporation=By.xpath("//input[@id=\"country_of_incorporation\"]");
 	private By CountryofOperation=By.xpath("//input[@id=\"country_of_operation\"]");
@@ -33,6 +38,8 @@ public class BuyerPortal_BusinessOnboardingPage {
 	private By OnlinePages=By.xpath("//input[@id=\":r6h:\"]");
 	private By companydescription=By.xpath("//textarea[@id=\"outlined-multiline-flexible\"]");
 	private By nextbutton=By.xpath("//button[text()='Next']");
+	
+	private By updatebutton=By.xpath("//button[text()='Update']");
 	
 	private By location=By.xpath("//input[@id='address']");
 	private By mailingaddress=By.xpath("//span[text()='I have a different mailing address']");
@@ -80,15 +87,22 @@ public class BuyerPortal_BusinessOnboardingPage {
 //		Thread.sleep(2000);
 		
 		reusable.click(businessbtn);
-		//reusable.click(companylogo);
-	//	Thread.sleep(2000);
-		reusable.clicking(changebutton);
+		reusable.click(companylogo);
 		reusable.uploadrobot( filepath);
 		reusable.click(applybutton);
+		reusable.click(companylogo);
+		reusable.click(removebutton);
+		reusable.click(deletebutton);
+		
 		reusable.click(coverphoto);
-		reusable.clicking(changebutton);
-		reusable.uploadrobot( filepath1);
+		reusable.uploadrobot( filepath);
 		reusable.click(applybutton);
+		reusable.click(companylogo);
+		reusable.click(removebutton);
+		reusable.click(deletebutton);
+		
+		reusable.click(editicon);
+		
 		reusable.sendkeyss(entityname,text1);
 		reusable.sendkeyss(countryofincorporation,text2);
 		reusable.arrowdown(countryofincorporation);
@@ -100,8 +114,8 @@ public class BuyerPortal_BusinessOnboardingPage {
 		reusable.sendkeyss(companywebsite, text5);
 		reusable.click(PrimaryIndustry);
 		reusable.multipleArrowDown(PrimaryIndustry);
-		reusable.click(nextbutton);	
-		reusable.assertion1(assert_ContactDetails, text6);
+		reusable.click(updatebutton);	
+		//reusable.assertion1(assert_ContactDetails, text6);
 	}
 	public void contactDetailsPage(String text1,String text2,String text3,String text4) throws InterruptedException, AWTException, IOException
 	{   

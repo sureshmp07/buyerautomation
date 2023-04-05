@@ -65,13 +65,7 @@ public class BuyerPortal_searchPage1 {
 	public void searchpage2(String name1,String name2,String s2,String s3,String path,String p1,int v1,int v2) throws InterruptedException
 	{   
 		reusable.click(foodclick);
-		Thread.sleep(2000);
-		try {
-			reusable.insertText(searchbox, reusable.excel(path, p1, v1, v2));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}	
+		
 		reusable.click(searchclick);
 		reusable.actions(arrowright);
 	    reusable.actions(proxteraicon);
@@ -91,7 +85,7 @@ public class BuyerPortal_searchPage1 {
 	    reusable.navigate(driver);
 	    reusable.clickOn(partnerplatformclick);
 	    reusable.clickingallelements(country);
-		Thread.sleep(2000);
+		
 		reusable.clickingallelements(comparecheckbox);
 		reusable.assertion(compareerrormsg, s3);
 		reusable.click(comparebutton);

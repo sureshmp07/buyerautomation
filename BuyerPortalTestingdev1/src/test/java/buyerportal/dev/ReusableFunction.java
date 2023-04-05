@@ -167,7 +167,8 @@ public static  File file;
 		      }
 	}
 	//clicking all elements
-	public void clickingallelements(By locator) {
+	public void clickingallelements(By locator) throws InterruptedException {
+		Thread.sleep(2000);
 	try {
 		ArrayList<WebElement> element = (ArrayList<WebElement>) driver.findElements(locator);	
 		int count =0;

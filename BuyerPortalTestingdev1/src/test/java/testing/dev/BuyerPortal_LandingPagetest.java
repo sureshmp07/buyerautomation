@@ -15,15 +15,7 @@ public void search() throws InterruptedException
 	{
 		
 		landinpage.landingpage(properties.getProperty("buyersearch"));
-//		String expectedtext = "table";
-//        String actualtext = driver.findElement(By.xpath("//input[@value='table']")).getText();
-//        
-//			try {
-//				ReusableFunction.assertion(expectedtext, actualtext);
-//			} catch (IOException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
+
 	}
 	@Test(priority=2)
 	
@@ -46,15 +38,6 @@ public void search() throws InterruptedException
 	
 	{
 		landinpage.landingpage2();
-//		String expectedtext = "Table";
-//        String actualtext = driver.findElement(By.xpath("//a[text()='Table']")).getText();
-//        
-//			try {
-//				ReusableFunction.assertion(expectedtext, actualtext);
-//			} catch (IOException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
 }
 	
 	@Test(priority=4)
@@ -62,30 +45,12 @@ public void search() throws InterruptedException
 	
 	{
 		landinpage.testimonials1();
-//		String expectedtext = "Table";
-//        String actualtext = driver.findElement(By.xpath("//a[text()='Table']")).getText();
-//        
-//			try {
-//				ReusableFunction.assertion(expectedtext, actualtext);
-//			} catch (IOException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
 }
 	@Test(priority=5)
 	public void footer1() throws InterruptedException, IOException
 	
 	{
 		landinpage.footer();
-//		String expectedtext = "Table";
-//        String actualtext = driver.findElement(By.xpath("//a[text()='Table']")).getText();
-//        
-//			try {
-//				ReusableFunction.assertion(expectedtext, actualtext);
-//			} catch (IOException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
 }
 	@Test(priority=6)
 	public void searchpage() throws InterruptedException

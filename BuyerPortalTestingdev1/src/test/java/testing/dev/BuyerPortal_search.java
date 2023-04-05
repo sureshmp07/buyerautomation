@@ -38,15 +38,7 @@ public class BuyerPortal_search extends BaseTest{
 	
 	  
 	loginsearch.loginsearch(properties.getProperty("buyersearch"));
-//	String expectedtext = "Apollo Table (Worldwide)";
-//       String actualtext = driver.findElement(By.xpath("//div[text()='Apollo Table']")).getText();
-//     	try {
-//     		ReusableFunction.assertion1(expectedtext, actualtext);
-//     	}
-//		catch (IOException e) {
-//			// TODO Auto-generated catch block
-//		e.printStackTrace();
-//		}
+
 	   
 	}
 	
@@ -56,14 +48,7 @@ public class BuyerPortal_search extends BaseTest{
 	{
 		
 		  contactSupplier.contactSupplier(properties.getProperty("enquiry"),properties.getProperty("message"),properties.getProperty("assertcontactsupplier"));
-     	  String expectedtext = "Apollo Table (Worldwide)";
-          String actualtext = driver.findElement(By.xpath("//div[text()='Apollo Table']")).getText();
-//          try {
-//  			ReusableFunction.assertion(expectedtext, actualtext);
-//  		} catch (IOException e) {
-//  			// TODO Auto-generated catch block
-//  			e.printStackTrace();
-//  		}
+     	  
 	}
 	@Test	(priority=4)
 	public void contactSupplier1() throws InterruptedException
@@ -71,29 +56,14 @@ public class BuyerPortal_search extends BaseTest{
 	{
 		
 		  contactSupplier.contactSupplier1(properties.getProperty("enquiry1"),properties.getProperty("compan_name"),properties.getProperty("countryselect"),properties.getProperty("taxid"),properties.getProperty("message"),properties.getProperty("assertcontactsupplier"));
-     	  String expectedtext = "Apollo Table (Worldwide)";
-          String actualtext = driver.findElement(By.xpath("//div[text()='Apollo Table']")).getText();
-//          try {
-//  			ReusableFunction.assertion1(expectedtext, actualtext);
-//  		} catch (IOException e) {
-//  			// TODO Auto-generated catch block
-//  			e.printStackTrace();
-//  		}
-	}
+     	 	}
 	@Test	(priority=5)
 	public void requestQuote() throws InterruptedException
 	
 	{
 		
 		  requestQuote.requestQuote(properties.getProperty("companynam"),properties.getProperty("quantiti"),properties.getProperty("destinatio"),properties.getProperty("requiremnt"));
-     	  String expectedtext = "Apollo Table (Worldwide)";
-          String actualtext = driver.findElement(By.xpath("//div[text()='Apollo Table']")).getText();
-//          try {
-//  			ReusableFunction.assertion1(expectedtext, actualtext);
-//  		} catch (IOException e) {
-//  			// TODO Auto-generated catch block
-//  			e.printStackTrace();
-//  		}
+     	 
 	}
 	@Test	(enabled=false)
 	public void profileUpdate() throws InterruptedException, AWTException

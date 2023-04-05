@@ -9,44 +9,22 @@
           <include name="tearDown"/>
           <include name="closeReport"/>
           <include name="setUp"/>
-          <include name="signUpPageTest4"/>
-          <include name="signUpPageTest1"/>
           <include name="signupPageTest3"/>
-          <include name="signUpPageTest5"/>
           <include name="setReports"/>
         </methods>
       </class> <!-- testing.dev.BuyerPortalSignUpTest -->
     </classes>
   </test> <!-- Test1(failed) -->
-  <test thread-count="5" name="Test2(failed)">
-    <classes>
-      <class name="testing.dev.BuyerPortalLogin">
-        <methods>
-          <include name="signInPageTest5"/>
-          <include name="testName"/>
-          <include name="tearDown"/>
-          <include name="signUpPageTest1"/>
-          <include name="closeReport"/>
-          <include name="setUp"/>
-          <include name="setReports"/>
-        </methods>
-      </class> <!-- testing.dev.BuyerPortalLogin -->
-    </classes>
-  </test> <!-- Test2(failed) -->
   <test thread-count="5" name="Test3(failed)">
     <classes>
       <class name="testing.dev.BuyerPortal_LandingPagetest">
         <methods>
-          <include name="search"/>
           <include name="testName"/>
           <include name="tearDown"/>
           <include name="footer1"/>
-          <include name="popularSearch"/>
-          <include name="testimonials"/>
           <include name="searchpage"/>
           <include name="closeReport"/>
           <include name="setUp"/>
-          <include name="categories"/>
           <include name="setReports"/>
         </methods>
       </class> <!-- testing.dev.BuyerPortal_LandingPagetest -->
@@ -57,19 +35,14 @@
       <class name="testing.dev.BuyerPortal_ComparePageTest">
         <methods>
           <include name="contactSupplier12"/>
+          <include name="testName"/>
           <include name="tearDown"/>
-          <include name="contactSupplier11"/>
-          <include name="requestQuote1"/>
+          <include name="contactSupplier"/>
           <include name="signInPageTest"/>
           <include name="closeReport"/>
-          <include name="compare"/>
-          <include name="requestQuote"/>
-          <include name="setReports"/>
-          <include name="testName"/>
-          <include name="contactSupplier"/>
-          <include name="comparePage01"/>
           <include name="setUp"/>
           <include name="contactSupplier1"/>
+          <include name="setReports"/>
         </methods>
       </class> <!-- testing.dev.BuyerPortal_ComparePageTest -->
     </classes>
@@ -81,10 +54,8 @@
           <include name="testName"/>
           <include name="tearDown"/>
           <include name="contactSupplier"/>
-          <include name="loginsearchPageTest"/>
           <include name="closeReport"/>
           <include name="setUp"/>
-          <include name="requestQuote"/>
           <include name="signInPageTest"/>
           <include name="favPage1"/>
           <include name="contactSupplier1"/>
@@ -93,37 +64,6 @@
       </class> <!-- testing.dev.BuyerPortal_FavouritePageTest -->
     </classes>
   </test> <!-- Test5(failed) -->
-  <test thread-count="5" name="Test6(failed)">
-    <classes>
-      <class name="testing.dev.BuyerPortal_Trusted_EducationPageTest">
-        <methods>
-          <include name="testName"/>
-          <include name="tearDown"/>
-          <include name="closeReport"/>
-          <include name="setUp"/>
-          <include name="signInPageTest1"/>
-          <include name="EucationPage"/>
-          <include name="TrustedPage"/>
-          <include name="setReports"/>
-        </methods>
-      </class> <!-- testing.dev.BuyerPortal_Trusted_EducationPageTest -->
-    </classes>
-  </test> <!-- Test6(failed) -->
-  <test thread-count="5" name="Test7(failed)">
-    <classes>
-      <class name="testing.dev.BuyerPortal_LogisticsPageTest">
-        <methods>
-          <include name="testName"/>
-          <include name="tearDown"/>
-          <include name="signInPageTest1"/>
-          <include name="closeReport"/>
-          <include name="setUp"/>
-          <include name="logisticspage"/>
-          <include name="setReports"/>
-        </methods>
-      </class> <!-- testing.dev.BuyerPortal_LogisticsPageTest -->
-    </classes>
-  </test> <!-- Test7(failed) -->
   <test thread-count="5" name="Test8(failed)">
     <classes>
       <class name="testing.dev.BuyerPortal_MySpacesTest">
@@ -133,25 +73,9 @@
           <include name="MySpaces"/>
           <include name="closeReport"/>
           <include name="setUp"/>
-          <include name="signInPageTest1"/>
           <include name="setReports"/>
         </methods>
       </class> <!-- testing.dev.BuyerPortal_MySpacesTest -->
     </classes>
   </test> <!-- Test8(failed) -->
-  <test thread-count="5" name="Test9(failed)">
-    <classes>
-      <class name="testing.dev.BuyerPortal_EmcxPageTest">
-        <methods>
-          <include name="testName"/>
-          <include name="tearDown"/>
-          <include name="signInPageTest1"/>
-          <include name="emcxPage"/>
-          <include name="closeReport"/>
-          <include name="setUp"/>
-          <include name="setReports"/>
-        </methods>
-      </class> <!-- testing.dev.BuyerPortal_EmcxPageTest -->
-    </classes>
-  </test> <!-- Test9(failed) -->
 </suite> <!-- Failed suite [Suite] -->

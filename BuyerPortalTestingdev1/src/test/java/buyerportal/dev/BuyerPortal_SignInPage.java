@@ -25,6 +25,8 @@ public class BuyerPortal_SignInPage {
 	
 	 private By assertsignin=By.xpath("//span[text()='S04 - 3 Seater']");
 	 
+	 private By assertsignin1=By.xpath("//div[text()='Dashboard']");
+	 
 	public BuyerPortal_SignInPage(WebDriver driver) {
 		this.driver=driver;
 	    reusable=new ReusableFunction(this.driver);
@@ -36,7 +38,7 @@ public class BuyerPortal_SignInPage {
 	//reusable.click(googlelogin);
 	reusable.insertText(email,name1);
 	reusable.insertText(password,name2);
-	reusable.click(checkboxclick);
+//reusable.click(checkboxclick);
 	reusable.click(signinbutton);	
 	reusable.assertion1(assert_business,name3);
 	//reusable.click(tableclick);
@@ -51,8 +53,9 @@ public class BuyerPortal_SignInPage {
 	//reusable.click(googlelogin);
 	reusable.insertText(email,name1);
 	reusable.insertText(password,name2);
-	reusable.click(checkboxclick);
+	//reusable.click(checkboxclick);
 	reusable.click(signinbutton);
+	
 	reusable.assertion(assertsignin, name3);
 
 }
