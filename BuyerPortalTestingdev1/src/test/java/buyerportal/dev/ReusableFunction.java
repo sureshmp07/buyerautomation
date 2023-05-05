@@ -229,19 +229,33 @@ public static  File file;
 	Assert.assertEquals(s, value);
 	childtest.log(Status.PASS,"text verified "+s);
 	System.out.println("text verified :"+s);
-	} catch (Exception e) {
-		 	
-		
+	} catch (Exception e) {	
 	// TODO Auto-generated catch block
 	childtest.log(Status.FAIL,"text not verified ");
 	System.out.println("text not verified");
 	}
     return value;
     }
-    
-
-    // take screenshoot
-    //Assert.assertTrue(expectedUrl.equals(value));
+	public String  assertion_url(By locator,String expectedURL) throws InterruptedException {		
+    Thread.sleep(3000);
+	try {
+	
+	WebDriverWait wait = new WebDriverWait(driver, 7000);
+	wait.until(ExpectedConditions.urlContains("https://wise.com/partner/proxtera?utm_source=proxtera&utm_medium=bank&utm_campaign=proxtera")); 
+	WebElement click= driver.findElement(locator);
+	String s=click.getText();
+   // Verify the URL using an assertion
+	Assert.assertEquals(s, expectedURL);
+	childtest.log(Status.PASS,"text verified "+s);
+	System.out.println("text verified :"+s);
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+	childtest.log(Status.FAIL,"text not verified ");
+	System.out.println("text not verified");
+	e.printStackTrace();
+	}
+	return expectedURL;
+	}
 	private static FluentWait<WebDriver> WebDriverWait(WebDriver driver2, int i) {
 		// TODO Auto-generated method stub
 		return null;

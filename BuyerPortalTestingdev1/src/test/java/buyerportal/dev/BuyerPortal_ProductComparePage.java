@@ -9,7 +9,7 @@ public class BuyerPortal_ProductComparePage {
 	private WebDriver driver;
 	private ReusableFunction reusable;
 	
-	private By proxteraicon=By.xpath("//img[@class=\"cursor-pointer\"]");
+	private By proxteraicon=By.xpath("//img[@class=\"cursor-pointer  \"]");
 	private By beauty=By.xpath("//div[text()='Beauty']");
 	
 	

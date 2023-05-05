@@ -62,7 +62,7 @@ public class BuyerPortal_LandingPage {
 	private By sfe1=By.xpath("//div[text()='Content brought to you by']");
 	private By tradehub1=By.xpath("//span[text()='meta-hub']");
 	private By tradefinancing1=By.xpath("//div[@data-id=\"d2e2932\"]");
-	private By emcx1=By.xpath("//div[@data-id=\"f727073\"]");
+	private By emcx1=By.xpath("//h2[text()='4 simple steps to transact']");
 	private By ifes1=By.xpath("//h4[@class=\"breadcrumb-content words lines splitting\"]");	
 			
 	private By linkedin1=By.xpath("//h2[normalize-space()=\"Sign in to see who you already know at Proxtera\"]");

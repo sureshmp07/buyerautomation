@@ -11,7 +11,7 @@ public class BuyerPortal_LoginSearch {
 	private ReusableFunction reusable;
 	
 	private By search =By.xpath("//input[@class='z-index-hero']");
-	private By searchclick=By.xpath("//p[text()='Search']");
+	private By searchclick=By.xpath("//button[text()='Search']");
 	private By tableclick=By.xpath("//img[@class='card-image cursor-pointer']");
 	//private String heading = driver.findElement(By.xpath("//div[@class='text']//h2")).getText();
 	
@@ -27,5 +27,11 @@ public class BuyerPortal_LoginSearch {
 	reusable.insertText(search, buyersearch);
 	reusable.clickOn(searchclick);	
 	reusable.click(tableclick);
+}
+	public void loginsearch1(String buyersearch) throws InterruptedException
+	{
+	reusable.insertText(search, buyersearch);
+	reusable.clickOn(searchclick);	
+	
 }
 }

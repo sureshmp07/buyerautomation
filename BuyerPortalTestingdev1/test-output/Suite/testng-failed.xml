@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test1(failed)">
-    <classes>
-      <class name="testing.dev.BuyerPortalSignUpTest">
-        <methods>
-          <include name="testName"/>
-          <include name="tearDown"/>
-          <include name="closeReport"/>
-          <include name="setUp"/>
-          <include name="signupPageTest3"/>
-          <include name="setReports"/>
-        </methods>
-      </class> <!-- testing.dev.BuyerPortalSignUpTest -->
-    </classes>
-  </test> <!-- Test1(failed) -->
   <test thread-count="5" name="Test3(failed)">
     <classes>
       <class name="testing.dev.BuyerPortal_LandingPagetest">
@@ -22,7 +8,6 @@
           <include name="testName"/>
           <include name="tearDown"/>
           <include name="footer1"/>
-          <include name="searchpage"/>
           <include name="closeReport"/>
           <include name="setUp"/>
           <include name="setReports"/>
@@ -35,14 +20,19 @@
       <class name="testing.dev.BuyerPortal_ComparePageTest">
         <methods>
           <include name="contactSupplier12"/>
-          <include name="testName"/>
           <include name="tearDown"/>
-          <include name="contactSupplier"/>
+          <include name="contactSupplier11"/>
+          <include name="requestQuote1"/>
           <include name="signInPageTest"/>
           <include name="closeReport"/>
+          <include name="compare"/>
+          <include name="requestQuote"/>
+          <include name="setReports"/>
+          <include name="testName"/>
+          <include name="contactSupplier"/>
+          <include name="comparePage01"/>
           <include name="setUp"/>
           <include name="contactSupplier1"/>
-          <include name="setReports"/>
         </methods>
       </class> <!-- testing.dev.BuyerPortal_ComparePageTest -->
     </classes>
@@ -53,12 +43,9 @@
         <methods>
           <include name="testName"/>
           <include name="tearDown"/>
-          <include name="contactSupplier"/>
           <include name="closeReport"/>
           <include name="setUp"/>
           <include name="signInPageTest"/>
-          <include name="favPage1"/>
-          <include name="contactSupplier1"/>
           <include name="setReports"/>
         </methods>
       </class> <!-- testing.dev.BuyerPortal_FavouritePageTest -->

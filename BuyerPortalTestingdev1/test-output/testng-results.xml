@@ -2,76 +2,76 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-05T16:18:49 IST" name="Default suite" finished-at="2023-04-05T16:21:05 IST" duration-ms="135645">
+  <suite started-at="2023-05-05T13:25:37 IST" name="Default suite" finished-at="2023-05-05T13:30:15 IST" duration-ms="278835">
     <groups>
     </groups>
-    <test started-at="2023-04-05T16:18:49 IST" name="Default test" finished-at="2023-04-05T16:21:05 IST" duration-ms="135645">
-      <class name="testing.dev.BuyerPortal_EmcxPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testing.dev.BuyerPortal_EmcxPageTest@72057ecf]" started-at="2023-04-05T16:18:49 IST" name="setUp" finished-at="2023-04-05T16:18:53 IST" duration-ms="3881" status="PASS">
+    <test started-at="2023-05-05T13:25:37 IST" name="Default test" finished-at="2023-05-05T13:30:15 IST" duration-ms="278835">
+      <class name="testing.dev.BuyerPortal_LandingPagetest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testing.dev.BuyerPortal_LandingPagetest@72057ecf]" started-at="2023-05-05T13:25:37 IST" name="setUp" finished-at="2023-05-05T13:25:44 IST" duration-ms="7446" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setReports()[pri:0, instance:testing.dev.BuyerPortal_EmcxPageTest@72057ecf]" started-at="2023-04-05T16:18:53 IST" name="setReports" finished-at="2023-04-05T16:18:53 IST" duration-ms="146" status="PASS">
+        <test-method is-config="true" signature="setReports()[pri:0, instance:testing.dev.BuyerPortal_LandingPagetest@72057ecf]" started-at="2023-05-05T13:25:44 IST" name="setReports" finished-at="2023-05-05T13:25:44 IST" duration-ms="156" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setReports -->
-        <test-method is-config="true" signature="testName(java.lang.reflect.Method)[pri:0, instance:testing.dev.BuyerPortal_EmcxPageTest@72057ecf]" started-at="2023-04-05T16:18:53 IST" name="testName" finished-at="2023-04-05T16:18:53 IST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="testName(java.lang.reflect.Method)[pri:0, instance:testing.dev.BuyerPortal_LandingPagetest@72057ecf]" started-at="2023-05-05T13:25:44 IST" name="testName" finished-at="2023-05-05T13:25:44 IST" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testing.dev.BuyerPortal_EmcxPageTest.signInPageTest1() throws java.lang.InterruptedException]]>
+                <![CDATA[public void testing.dev.BuyerPortal_LandingPagetest.search() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testName -->
-        <test-method signature="signInPageTest1()[pri:1, instance:testing.dev.BuyerPortal_EmcxPageTest@72057ecf]" started-at="2023-04-05T16:18:53 IST" name="signInPageTest1" finished-at="2023-04-05T16:19:39 IST" duration-ms="45922" status="PASS">
+        <test-method signature="search()[pri:1, instance:testing.dev.BuyerPortal_LandingPagetest@72057ecf]" started-at="2023-05-05T13:25:44 IST" name="search" finished-at="2023-05-05T13:25:51 IST" duration-ms="6489" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signInPageTest1 -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testing.dev.BuyerPortal_EmcxPageTest@72057ecf]" started-at="2023-04-05T16:19:39 IST" name="tearDown" finished-at="2023-04-05T16:19:39 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- search -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testing.dev.BuyerPortal_LandingPagetest@72057ecf]" started-at="2023-05-05T13:25:51 IST" name="tearDown" finished-at="2023-05-05T13:25:51 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=signInPageTest1 status=SUCCESS method=BuyerPortal_EmcxPageTest.signInPageTest1()[pri:1, instance:testing.dev.BuyerPortal_EmcxPageTest@72057ecf] output={null}]]]>
+                <![CDATA[[TestResult name=search status=SUCCESS method=BuyerPortal_LandingPagetest.search()[pri:1, instance:testing.dev.BuyerPortal_LandingPagetest@72057ecf] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="testName(java.lang.reflect.Method)[pri:0, instance:testing.dev.BuyerPortal_EmcxPageTest@72057ecf]" started-at="2023-04-05T16:19:39 IST" name="testName" finished-at="2023-04-05T16:19:39 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="testName(java.lang.reflect.Method)[pri:0, instance:testing.dev.BuyerPortal_LandingPagetest@72057ecf]" started-at="2023-05-05T13:25:51 IST" name="testName" finished-at="2023-05-05T13:25:51 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testing.dev.BuyerPortal_EmcxPageTest.emcxPage() throws java.lang.InterruptedException]]>
+                <![CDATA[public void testing.dev.BuyerPortal_LandingPagetest.footer1() throws java.lang.InterruptedException,java.io.IOException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testName -->
-        <test-method signature="emcxPage()[pri:2, instance:testing.dev.BuyerPortal_EmcxPageTest@72057ecf]" started-at="2023-04-05T16:19:39 IST" name="emcxPage" finished-at="2023-04-05T16:21:04 IST" duration-ms="85201" status="PASS">
+        <test-method signature="footer1()[pri:5, instance:testing.dev.BuyerPortal_LandingPagetest@72057ecf]" started-at="2023-05-05T13:25:51 IST" name="footer1" finished-at="2023-05-05T13:30:15 IST" duration-ms="263972" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- emcxPage -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testing.dev.BuyerPortal_EmcxPageTest@72057ecf]" started-at="2023-04-05T16:21:04 IST" name="tearDown" finished-at="2023-04-05T16:21:04 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- footer1 -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testing.dev.BuyerPortal_LandingPagetest@72057ecf]" started-at="2023-05-05T13:30:15 IST" name="tearDown" finished-at="2023-05-05T13:30:15 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=emcxPage status=SUCCESS method=BuyerPortal_EmcxPageTest.emcxPage()[pri:2, instance:testing.dev.BuyerPortal_EmcxPageTest@72057ecf] output={null}]]]>
+                <![CDATA[[TestResult name=footer1 status=SUCCESS method=BuyerPortal_LandingPagetest.footer1()[pri:5, instance:testing.dev.BuyerPortal_LandingPagetest@72057ecf] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="closeReport()[pri:0, instance:testing.dev.BuyerPortal_EmcxPageTest@72057ecf]" started-at="2023-04-05T16:21:04 IST" name="closeReport" finished-at="2023-04-05T16:21:05 IST" duration-ms="437" status="PASS">
+        <test-method is-config="true" signature="closeReport()[pri:0, instance:testing.dev.BuyerPortal_LandingPagetest@72057ecf]" started-at="2023-05-05T13:30:15 IST" name="closeReport" finished-at="2023-05-05T13:30:15 IST" duration-ms="710" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeReport -->
-      </class> <!-- testing.dev.BuyerPortal_EmcxPageTest -->
+      </class> <!-- testing.dev.BuyerPortal_LandingPagetest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

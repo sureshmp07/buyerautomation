@@ -21,6 +21,7 @@ public class BuyerPortal_FavouritePage {
 
 	public void favPage() throws InterruptedException
 	{   
+		
 		reusable.selectCheckboxes(favoriteicon);
 		reusable.click(pagination);
 		reusable.selectCheckboxes(favoriteicon);

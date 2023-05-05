@@ -15,13 +15,13 @@ public class BuyerPortal_ProductDetail {
 	private By individual=By.xpath("//li[text()='Individual']");
 	private By business=By.xpath("//li[text()='Business']");
 	private By message=By.xpath("//textarea[@placeholder=\"Type your message here\"]");
-	private By send=By.xpath("//p[text()='Send']");
+	private By send=By.xpath("//button[text()='Send']");
 	
 	private By assertcontactsupplier=By.xpath("//div[text()='Your request has been submitted successfully']");
 	
-	private By company=By.xpath("//input[@placeholder=\"Company Name\"]");
+	private By company=By.xpath("//input[@placeholder=\"Company Name*\"]");
 	private By countryclick=By.xpath("//input[@id='custom-input-demo']");
-	private By taxid=By.xpath("//input[@placeholder=\"Tax ID\"]");
+	private By taxid=By.xpath("//input[@placeholder=\"Tax ID*\"]");
 	
 	public BuyerPortal_ProductDetail(WebDriver driver) {
 		this.driver=driver;

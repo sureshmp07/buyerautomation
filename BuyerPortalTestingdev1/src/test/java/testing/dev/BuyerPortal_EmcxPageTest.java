@@ -1,5 +1,7 @@
 package testing.dev;
 
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 
 public class BuyerPortal_EmcxPageTest extends BaseTest{
@@ -13,9 +15,9 @@ public class BuyerPortal_EmcxPageTest extends BaseTest{
 	
 
 	@Test	(priority=2)
-	public void emcxPage() throws InterruptedException 
+	public void emcxPage() throws InterruptedException, IOException 
 	{
-    EmcxPage.EmcxPage();
+    EmcxPage.EmcxPage(properties.getProperty("SGDtoGHS"),properties.getProperty("assert_wise"),properties.getProperty("assert_thunes"),properties.getProperty("assert_liquid"));
       
 	}	
 }

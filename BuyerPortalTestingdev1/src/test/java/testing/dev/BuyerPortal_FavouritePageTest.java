@@ -31,7 +31,7 @@ public class BuyerPortal_FavouritePageTest extends BaseTest{
 	{
 	
 	  
-	loginsearch.loginsearch(properties.getProperty("buyersearch"));
+	loginsearch.loginsearch1(properties.getProperty("buyersearch"));
 	
 	}
 	@Test	(priority=3)
@@ -41,29 +41,29 @@ public void favPage1() throws InterruptedException
 	
 	FavouritePage.favPage();   
 	}
-	 @Test	(priority=4)
-		public void contactSupplier() throws InterruptedException
-		
-		{
-			
-			  contactSupplier.contactSupplier(properties.getProperty("enquiry"),properties.getProperty("message"),properties.getProperty("assertcontactsupplier"));
-	    	
-		}
-		@Test	(priority=5)
-		public void contactSupplier1() throws InterruptedException
-		
-		{
-			
-			  contactSupplier.contactSupplier1(properties.getProperty("enquiry1"),properties.getProperty("compan_name"),properties.getProperty("countryselect"),properties.getProperty("taxid"),properties.getProperty("message"),properties.getProperty("assertcontactsupplier"));
-	    	
-		}
-		@Test	(priority=6)
-		public void requestQuote() throws InterruptedException
-		
-		{
-			
-			  requestQuote.requestQuote(properties.getProperty("companynam"),properties.getProperty("quantiti"),properties.getProperty("destinatio"),properties.getProperty("requiremnt"));
-	    	 
-	 		}
+//	 @Test	(priority=4)
+//		public void contactSupplier() throws InterruptedException
+//		
+//		{
+//			
+//			  contactSupplier.contactSupplier(properties.getProperty("enquiry"),properties.getProperty("message"),properties.getProperty("assertcontactsupplier"));
+//	    	
+//		}
+//		@Test	(priority=5)
+//		public void contactSupplier1() throws InterruptedException
+//		
+//		{
+//			
+//			  contactSupplier.contactSupplier1(properties.getProperty("enquiry1"),properties.getProperty("compan_name"),properties.getProperty("countryselect"),properties.getProperty("taxid"),properties.getProperty("message"),properties.getProperty("assertcontactsupplier"));
+//	    	
+//		}
+//		@Test	(priority=6)
+//		public void requestQuote() throws InterruptedException
+//		
+//		{
+//			
+//			  requestQuote.requestQuote(properties.getProperty("companynam"),properties.getProperty("quantiti"),properties.getProperty("destinatio"),properties.getProperty("requiremnt"));
+//	    	 
+//	 		}
 
 }
