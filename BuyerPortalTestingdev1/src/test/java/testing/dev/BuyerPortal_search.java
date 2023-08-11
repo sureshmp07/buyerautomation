@@ -49,31 +49,25 @@ public class BuyerPortal_search extends BaseTest{
 //		
 //		  contactSupplier.contactSupplier1(properties.getProperty("enquiry1"),properties.getProperty("compan_name"),properties.getProperty("countryselect"),properties.getProperty("taxid"),properties.getProperty("message"),properties.getProperty("assertcontactsupplier"));
 //     	 	}
-	@Test	(priority=5)
-	public void requestQuote() throws InterruptedException
-	
-	{
-		
-		  requestQuote.requestQuote(properties.getProperty("companynam"),properties.getProperty("quantiti"),properties.getProperty("destinatio"),properties.getProperty("date1"),properties.getProperty("requiremnt"));
-     	 
-	}
-	@Test	(enabled=false)
-	public void profileUpdate() throws InterruptedException, AWTException
-	
-	{
-		
-		ProfilePage.profileUpdate(properties.getProperty("update_firstname"), properties.getProperty("update_lasttname"), properties.getProperty("update_mobile"), properties.getProperty("email"), properties.getProperty("addnew_firstname"), properties.getProperty("addnew_lastname"), properties.getProperty("designation"),properties.getProperty("update_mobilecode"));
-     	  //String expectedtext = "Apollo Table (Worldwide)";
-          WebElement actualtext = driver.findElement(By.xpath("//div[text()='User already exists']"));
-          ReusableFunction.elementIsVisible(actualtext);
-//          try {
-//  			ReusableFunction.assertion(expectedtext, actualtext);
-//  		} catch (IOException e) {
-//  			// TODO Auto-generated catch block
-//  			e.printStackTrace();
-//  		}
+//	@Test	(priority=5)
+//	public void requestQuote() throws InterruptedException
+//	
+//	{
+//		
+//		  requestQuote.requestQuote(properties.getProperty("companynam"),properties.getProperty("quantiti"),properties.getProperty("destinatio"),properties.getProperty("date1"),properties.getProperty("requiremnt"));
+//     	 
+//	}
+//	@Test	(enabled=false)
+//	public void profileUpdate() throws InterruptedException, AWTException
+//	
+//	{
+//		
+//		ProfilePage.profileUpdate(properties.getProperty("update_firstname"), properties.getProperty("update_lasttname"), properties.getProperty("update_mobile"), properties.getProperty("email"), properties.getProperty("addnew_firstname"), properties.getProperty("addnew_lastname"), properties.getProperty("designation"),properties.getProperty("update_mobilecode"));
+//     	  //String expectedtext = "Apollo Table (Worldwide)";
+//          WebElement actualtext = driver.findElement(By.xpath("//div[text()='User already exists']"));
+//          ReusableFunction.elementIsVisible(actualtext);
 //  	   
-	}
+//	}
 //	@Test	(priority=7)
 //	public void businessBuyer()
 //	

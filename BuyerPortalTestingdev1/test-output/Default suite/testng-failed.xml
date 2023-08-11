@@ -3,16 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testing.dev.BuyerPortal_ComparePageTest">
+      <class name="testing.dev.BuyerPortal_LandingPagetest">
         <methods>
           <include name="testName"/>
           <include name="tearDown"/>
-          <include name="contactSupplier"/>
+          <include name="footer1"/>
           <include name="closeReport"/>
           <include name="setUp"/>
           <include name="setReports"/>
         </methods>
-      </class> <!-- testing.dev.BuyerPortal_ComparePageTest -->
+      </class> <!-- testing.dev.BuyerPortal_LandingPagetest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
