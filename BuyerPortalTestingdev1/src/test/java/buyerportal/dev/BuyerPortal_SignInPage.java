@@ -56,7 +56,7 @@ public class BuyerPortal_SignInPage {
 	//reusable.click(checkboxclick);
 	reusable.click(signinbutton);
 	
-	reusable.assertion(assertsignin, name3);
+	reusable.assertion(assertsignin1, name3);
 
 }
 	

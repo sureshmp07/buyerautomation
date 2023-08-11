@@ -42,11 +42,11 @@ public class BuyerPortal_SignUp {
 	private By password=By.xpath("//input[@name='password']");
 	private By continuebutton=By.xpath("//p[text()='Continue']");
 	
-	private By expected=By.xpath("//div[text()='Email address already exists with another user account']");
-	private By expected_f=By.xpath("//div[text()='First Name is required']");
-	private By expected_l=By.xpath("//div[text()='Last Name is required']");
-	private By expected_u=By.xpath("//div[text()='Username is required']");
-	private By expected_p=By.xpath("//div[text()='Password is required']");
+	private By expected=By.xpath("//div[contains(text(),'It looks like you already have an account with our suite of products')]");
+	private By expected_f=By.xpath("//p[text()='First Name is required']");
+	private By expected_l=By.xpath("//p[text()='Last Name is required']");
+	private By expected_u=By.xpath("//p[text()='Username is required']");
+	private By expected_p=By.xpath("//p[text()='Password is required']");
 	
 	private By expected_commercial=By.xpath("//div[text()='Password is required']");
 	private By expected_terms=By.xpath("//div[text()='Password is required']");
@@ -64,7 +64,7 @@ public class BuyerPortal_SignUp {
 	private By countrycode=By.xpath("(//div[@class='MuiAutocomplete-endAdornment css-1q60rmi-MuiAutocomplete-endAdornment'])[2]");
 	private By contactnumber=By.xpath("//input[@name='phone_number']");
 	
-    private By expected1=By.xpath("//p[text()='A minimum of 8 characters. A combination of uppercase and lowercase letters, numbers and special characters is required.']");
+    private By expected1=By.xpath("//p[text()='A minimum 8 characters password contains a combination of uppercase and lowercase letter, number and special character are required.']");
 	
 	
 	private By businessemail=By.xpath("//input[@placeholder='Business Email Address*']");
@@ -90,7 +90,18 @@ public class BuyerPortal_SignUp {
 	reusable.clicking(close);
 	reusable.click(logout);
     }
+	public void fbsignUp1(String mail,String pass,String name1,String name2,String name3,String name4) throws IOException, InterruptedException
+	{
+	reusable.click(joinus);
 	
+	reusable.click(facebooklogin);
+	reusable.insertText(fb_email,mail);
+	reusable.insertText(fb_pass,pass);
+	reusable.click(fb_submit);
+	reusable.assertion(assertfb, name4);
+	//reusable.clicking(close);
+	//reusable.click(logout);
+    }
 	public void fbsignin(String mail,String pass,String name1,String name2,String name3) throws IOException, InterruptedException
 	{
 	reusable.click(signin);
@@ -129,11 +140,11 @@ public class BuyerPortal_SignUp {
 	reusable.click(joinus);
 	reusable.insertText(email,name1);
 	reusable.click(signup);
-	reusable.insertText(firstname, name2);
-	reusable.insertText(lastname, name3);
-	reusable.insertText(username, name4);
-	reusable.insertText(password,name5);
-	reusable.click(continuebutton);
+//	reusable.insertText(firstname, name2);
+//	reusable.insertText(lastname, name3);
+//	reusable.insertText(username, name4);
+//	reusable.insertText(password,name5);
+//	reusable.click(continuebutton);
 	reusable .assertion(expected, name6);
 	reusable.clicking(close1);	
     }
@@ -180,6 +191,7 @@ public class BuyerPortal_SignUp {
 	reusable.assertion(expected_l, name6);
 	reusable.assertion(expected_u, name7);
 	reusable.assertion(expected_p, name8);
+	reusable.clicking(close1);
 	
 }
 	

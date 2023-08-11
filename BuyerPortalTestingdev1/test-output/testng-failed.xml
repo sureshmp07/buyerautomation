@@ -1,18 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test3(failed)">
     <classes>
-      <class name="testing.dev.BuyerPortal_LandingPagetest">
+      <class name="testing.dev.BuyerPortal_DashboardPageTest">
         <methods>
           <include name="testName"/>
           <include name="tearDown"/>
-          <include name="footer1"/>
+          <include name="closeReport"/>
+          <include name="setUp"/>
+          <include name="dashboardPageTest1"/>
+          <include name="setReports"/>
+        </methods>
+      </class> <!-- testing.dev.BuyerPortal_DashboardPageTest -->
+    </classes>
+  </test> <!-- Test3(failed) -->
+  <test thread-count="5" name="Test4(failed)">
+    <classes>
+      <class name="testing.dev.BuyerPortal_ComparePageTest">
+        <methods>
+          <include name="testName"/>
+          <include name="tearDown"/>
+          <include name="contactSupplier"/>
           <include name="closeReport"/>
           <include name="setUp"/>
           <include name="setReports"/>
         </methods>
-      </class> <!-- testing.dev.BuyerPortal_LandingPagetest -->
+      </class> <!-- testing.dev.BuyerPortal_ComparePageTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test4(failed) -->
+  <test thread-count="5" name="Test6(failed)">
+    <classes>
+      <class name="testing.dev.BuyerPortal_EmcxPageTest">
+        <methods>
+          <include name="testName"/>
+          <include name="tearDown"/>
+          <include name="emcxPage"/>
+          <include name="closeReport"/>
+          <include name="setUp"/>
+          <include name="setReports"/>
+        </methods>
+      </class> <!-- testing.dev.BuyerPortal_EmcxPageTest -->
+    </classes>
+  </test> <!-- Test6(failed) -->
+</suite> <!-- Failed suite [Suite] -->

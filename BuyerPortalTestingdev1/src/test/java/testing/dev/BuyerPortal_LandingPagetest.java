@@ -17,27 +17,27 @@ public void search() throws InterruptedException
 		landinpage.landingpage(properties.getProperty("buyersearch"));
 
 	}
-//	@Test(priority=2)
-//	
-//	public void popularSearch() throws InterruptedException
-//	
-//	{
-//		landinpage.landingpage1();
-//
-//}
-//	@Test(priority=3)
-//	public void categories() throws InterruptedException
-//	
-//	{
-//		landinpage.landingpage2();
-//}
-//	
-//	@Test(priority=4)
-//	public void testimonials() throws InterruptedException
-//	
-//	{
-//		landinpage.testimonials1();
-//}
+	@Test(priority=2)
+	
+	public void popularSearch() throws InterruptedException
+	
+	{
+		landinpage.landingpage1();
+
+}
+	@Test(priority=3)
+	public void categories() throws InterruptedException
+	
+	{
+		landinpage.landingpage2();
+}
+	
+	@Test(priority=4)
+	public void testimonials() throws InterruptedException
+	
+	{
+		landinpage.testimonials1();
+}
 	@Test(priority=5)
 	public void footer1() throws InterruptedException, IOException
 	

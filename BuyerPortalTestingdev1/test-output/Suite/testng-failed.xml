@@ -3,66 +3,44 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test3(failed)">
     <classes>
-      <class name="testing.dev.BuyerPortal_LandingPagetest">
+      <class name="testing.dev.BuyerPortal_DashboardPageTest">
         <methods>
           <include name="testName"/>
           <include name="tearDown"/>
-          <include name="footer1"/>
           <include name="closeReport"/>
           <include name="setUp"/>
+          <include name="dashboardPageTest1"/>
           <include name="setReports"/>
         </methods>
-      </class> <!-- testing.dev.BuyerPortal_LandingPagetest -->
+      </class> <!-- testing.dev.BuyerPortal_DashboardPageTest -->
     </classes>
   </test> <!-- Test3(failed) -->
   <test thread-count="5" name="Test4(failed)">
     <classes>
       <class name="testing.dev.BuyerPortal_ComparePageTest">
         <methods>
-          <include name="contactSupplier12"/>
-          <include name="tearDown"/>
-          <include name="contactSupplier11"/>
-          <include name="requestQuote1"/>
-          <include name="signInPageTest"/>
-          <include name="closeReport"/>
-          <include name="compare"/>
-          <include name="requestQuote"/>
-          <include name="setReports"/>
           <include name="testName"/>
+          <include name="tearDown"/>
           <include name="contactSupplier"/>
-          <include name="comparePage01"/>
+          <include name="closeReport"/>
           <include name="setUp"/>
-          <include name="contactSupplier1"/>
+          <include name="setReports"/>
         </methods>
       </class> <!-- testing.dev.BuyerPortal_ComparePageTest -->
     </classes>
   </test> <!-- Test4(failed) -->
-  <test thread-count="5" name="Test5(failed)">
+  <test thread-count="5" name="Test6(failed)">
     <classes>
-      <class name="testing.dev.BuyerPortal_FavouritePageTest">
+      <class name="testing.dev.BuyerPortal_EmcxPageTest">
         <methods>
           <include name="testName"/>
           <include name="tearDown"/>
-          <include name="closeReport"/>
-          <include name="setUp"/>
-          <include name="signInPageTest"/>
-          <include name="setReports"/>
-        </methods>
-      </class> <!-- testing.dev.BuyerPortal_FavouritePageTest -->
-    </classes>
-  </test> <!-- Test5(failed) -->
-  <test thread-count="5" name="Test8(failed)">
-    <classes>
-      <class name="testing.dev.BuyerPortal_MySpacesTest">
-        <methods>
-          <include name="testName"/>
-          <include name="tearDown"/>
-          <include name="MySpaces"/>
+          <include name="emcxPage"/>
           <include name="closeReport"/>
           <include name="setUp"/>
           <include name="setReports"/>
         </methods>
-      </class> <!-- testing.dev.BuyerPortal_MySpacesTest -->
+      </class> <!-- testing.dev.BuyerPortal_EmcxPageTest -->
     </classes>
-  </test> <!-- Test8(failed) -->
+  </test> <!-- Test6(failed) -->
 </suite> <!-- Failed suite [Suite] -->

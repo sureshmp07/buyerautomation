@@ -33,7 +33,7 @@ public class BuyerPortalLogin extends BaseTest {
 	public void signInPageTest5() throws InterruptedException 
 	{
 		
-    	buyersign.signIn1(properties.getProperty("buy_email"),properties.getProperty("buy_password"),properties.getProperty("assertsignin1"));
+    	buyersign.signIn1(properties.getProperty("buy_email1"),properties.getProperty("buy_password"),properties.getProperty("assertsignin1"));
        
    
 	}

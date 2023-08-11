@@ -39,6 +39,7 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import buyerportal.dev.BuyerPortal_BusinessOnboardingPage;
+import buyerportal.dev.BuyerPortal_DashboardPage;
 import buyerportal.dev.BuyerPortal_EmcxPage;
 import buyerportal.dev.BuyerPortal_FavouritePage;
 import buyerportal.dev.BuyerPortal_FinancingPage;
@@ -91,6 +92,8 @@ public class BaseTest  {
 	public BuyerPortal_EmcxPage EmcxPage;
 	public BuyerPortal_LogisticsPage logisticsPage;
 	public BuyerPortal_FinancingPage financepage;
+	
+	public BuyerPortal_DashboardPage DashboardPage;
 	
 	public static String classname=null;
 	public static String testname;
@@ -146,6 +149,7 @@ public class BaseTest  {
 	   logisticsPage=new BuyerPortal_LogisticsPage(driver);
 	   financepage=new BuyerPortal_FinancingPage(driver);
 	   
+	   DashboardPage=new BuyerPortal_DashboardPage(driver);
 		//wb=driverFactory.excelData("Details", 2, 2);
 //	    ExtentHtmlReporter extend=new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"/Reports/signin.html"));
 //	    report=new ExtentReports();

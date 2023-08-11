@@ -202,7 +202,7 @@ public static  File file;
 	JavascriptExecutor js = (JavascriptExecutor)driver;
 	js.executeScript("arguments[0].click()",element);
 	childtest.log(Status.PASS,"Clicked on "+s);
-	System.out.println("Clicked on ");
+	System.out.println("Clicked on "+s);
 	result=true;
 	break;
 	} catch (Exception e) {
@@ -308,7 +308,7 @@ public static  File file;
 	}
 	
 	//move to next window 
-	public void switchTo(By locator, int value) throws InterruptedException
+	public void switchTo(By locator,int value) throws InterruptedException
 	
 	{
 	Thread.sleep(3000);
@@ -331,8 +331,9 @@ public static  File file;
 
 		      //verify if status is true
      if (expected != null) {
+    	
 	 childtest.log(Status.PASS,"text present "+expected);
-	 System.out.println("text present");
+	 System.out.println("text present"+expected);
      } else {
      childtest.log(Status.FAIL,"text not present ");
 	 System.out.println("text not present");
@@ -669,6 +670,12 @@ for (int i=1; i<=listofItems.size(); i++)
 		 
 	    driver.switchTo().frame(element);
 	}
+	public void calendar(By locator,String dateVal) {
+		//String dateVal = "November 22, 2020";
+		JavascriptExecutor js=(JavascriptExecutor)driver; 
+	    js.executeScript("arguments[0].click();", driver.findElement(locator));
+	
+	}
 	//selecting single dropdown
 		public  void selectDropdown(By locator, String value)
 		{
@@ -700,10 +707,10 @@ for (int i=1; i<=listofItems.size(); i++)
 				Thread.sleep(3000);
 			    try {
 					WebDriverWait wait = new WebDriverWait(driver, 30);
-					wait.until(ExpectedConditions.refreshed(
-					    ExpectedConditions.elementToBeClickable(locator)));
+					wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(locator)));
 					driver.findElement(locator).click();
 					System.out.println("clicked on");
+					Thread.sleep(3000);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					System.out.println("unable to click");

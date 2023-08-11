@@ -19,15 +19,7 @@ public class BuyerPortal_search extends BaseTest{
 	
 	{
 		
-		buyersign.signIn(properties.getProperty("buy_email"),properties.getProperty("buy_password"),properties.getProperty("assert_signin"));
-//		String expectedtext = "Food";
-//        String actualtext = driver.findElement(By.xpath("//a[text()='Food']")).getText();
-//        try {
-//			ReusableFunction.assertion(expectedtext, actualtext);
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		buyersign.signIn(properties.getProperty("buy_email1"),properties.getProperty("buy_password"),properties.getProperty("assert_signin"));
 
 	}
 
@@ -42,27 +34,27 @@ public class BuyerPortal_search extends BaseTest{
 	   
 	}
 	
-	@Test	(priority=3)
-	public void contactSupplier() throws InterruptedException
-	
-	{
-		
-		  contactSupplier.contactSupplier(properties.getProperty("enquiry"),properties.getProperty("message"),properties.getProperty("assertcontactsupplier"));
-     	  
-	}
-	@Test	(priority=4)
-	public void contactSupplier1() throws InterruptedException
-	
-	{
-		
-		  contactSupplier.contactSupplier1(properties.getProperty("enquiry1"),properties.getProperty("compan_name"),properties.getProperty("countryselect"),properties.getProperty("taxid"),properties.getProperty("message"),properties.getProperty("assertcontactsupplier"));
-     	 	}
+//	@Test	(priority=3)
+//	public void contactSupplier() throws InterruptedException
+//	
+//	{
+//		
+//		  contactSupplier.contactSupplier(properties.getProperty("enquiry"),properties.getProperty("message"),properties.getProperty("assertcontactsupplier"));
+//     	  
+//	}
+//	@Test	(priority=4)
+//	public void contactSupplier1() throws InterruptedException
+//	
+//	{
+//		
+//		  contactSupplier.contactSupplier1(properties.getProperty("enquiry1"),properties.getProperty("compan_name"),properties.getProperty("countryselect"),properties.getProperty("taxid"),properties.getProperty("message"),properties.getProperty("assertcontactsupplier"));
+//     	 	}
 	@Test	(priority=5)
 	public void requestQuote() throws InterruptedException
 	
 	{
 		
-		  requestQuote.requestQuote(properties.getProperty("companynam"),properties.getProperty("quantiti"),properties.getProperty("destinatio"),properties.getProperty("requiremnt"));
+		  requestQuote.requestQuote(properties.getProperty("companynam"),properties.getProperty("quantiti"),properties.getProperty("destinatio"),properties.getProperty("date1"),properties.getProperty("requiremnt"));
      	 
 	}
 	@Test	(enabled=false)

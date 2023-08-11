@@ -10,6 +10,7 @@ public class BuyerPortal_LoginSearch {
 	private WebDriver driver;
 	private ReusableFunction reusable;
 	
+	private By popular =By.xpath("//div[text()='Food']");
 	private By search =By.xpath("//input[@class='z-index-hero']");
 	private By searchclick=By.xpath("//button[text()='Search']");
 	private By tableclick=By.xpath("//img[@class='card-image cursor-pointer']");
@@ -30,6 +31,7 @@ public class BuyerPortal_LoginSearch {
 }
 	public void loginsearch1(String buyersearch) throws InterruptedException
 	{
+	reusable.click(popular);	
 	reusable.insertText(search, buyersearch);
 	reusable.clickOn(searchclick);	
 	

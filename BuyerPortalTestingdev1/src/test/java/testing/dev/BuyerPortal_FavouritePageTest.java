@@ -8,21 +8,20 @@ import org.testng.annotations.Test;
 
 public class BuyerPortal_FavouritePageTest extends BaseTest{
 	
+//	@Test	(priority=1)
+//	public void signInPageTest() throws IOException, InterruptedException
+//	
+//	{
+//		
+//		buyersign.signIn(properties.getProperty("dev_email"),properties.getProperty("dev_pass"),properties.getProperty("assert_business"));
+//
+//	}
 	@Test	(priority=1)
-	public void signInPageTest() throws IOException, InterruptedException
-	
+	public void signUpPageTest1() throws IOException, InterruptedException 
 	{
 		
-		buyersign.signIn(properties.getProperty("dev_email"),properties.getProperty("dev_pass"),properties.getProperty("assert_business"));
-//		String expectedtext = "Food";
-//        String actualtext = driver.findElement(By.xpath("//a[text()='Food']")).getText();
-//        try {
-//			ReusableFunction.assertion(expectedtext, actualtext);
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-
+		signup.fbsignUp1(properties.getProperty("fb_email"),properties.getProperty("fb_pass"),properties.getProperty("commercial"),properties.getProperty("terms"),properties.getProperty("privacy"),properties.getProperty("assertfb"));
+	    
 	}
 
 	@Test	(priority=2)

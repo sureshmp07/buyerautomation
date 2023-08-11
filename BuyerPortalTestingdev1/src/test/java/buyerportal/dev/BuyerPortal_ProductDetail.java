@@ -16,12 +16,14 @@ public class BuyerPortal_ProductDetail {
 	private By business=By.xpath("//li[text()='Business']");
 	private By message=By.xpath("//textarea[@placeholder=\"Type your message here\"]");
 	private By send=By.xpath("//button[text()='Send']");
+	private By close=By.xpath("(//*[local-name()='svg' and @fill=\"none\"]/*[local-name()='path'])[32]");
 	
 	private By assertcontactsupplier=By.xpath("//div[text()='Your request has been submitted successfully']");
 	
-	private By company=By.xpath("//input[@placeholder=\"Company Name*\"]");
+	private By company_legalnm=By.xpath("//input[@placeholder=\"Company Legal Name*\"]");
 	private By countryclick=By.xpath("//input[@id='custom-input-demo']");
-	private By taxid=By.xpath("//input[@placeholder=\"Tax ID*\"]");
+	private By taxid=By.xpath("//label[text()='Tax Identification Number*']/following::input");
+	
 	
 	public BuyerPortal_ProductDetail(WebDriver driver) {
 		this.driver=driver;
@@ -29,28 +31,27 @@ public class BuyerPortal_ProductDetail {
 		}
 	
 
-	public void contactSupplier(String name1,String name2,String name3) throws InterruptedException
+	public void contact_individual(String name1,String name2) throws InterruptedException
 	{
 	reusable.click(contactsupplier);
 	reusable.clicking(enquiry);
 	reusable.click(individual);
-    reusable.insertText(message, name2);
+    reusable.insertText(message, name1);
     reusable.click(send);
-    reusable.assertion(assertcontactsupplier, name3);
+    reusable.assertion(assertcontactsupplier, name2);
+    reusable.click(close);
 }
-	public void contactSupplier1(String name1,String name2,String name3,String name4,String name5,String name6) throws InterruptedException
+	public void contact_business(String name1,String name2,String name3,String name4) throws InterruptedException
 	{
 	reusable.click(contactsupplier);
 	reusable.clicking(enquiry);
 	reusable.click(business);
-	reusable.insertText(company, name2);
-	reusable.clicking(countryclick);
-	reusable.insertText(countryclick,name3);
-	reusable.arrowdown(countryclick);
-	reusable.insertText(taxid, name4);
-    reusable.insertText(message, name5);
+	reusable.insertText(company_legalnm, name1);
+	reusable.insertText(taxid, name2);
+    reusable.insertText(message, name3);
     reusable.click(send);
-    reusable.assertion(assertcontactsupplier, name6);
+    reusable.assertion(assertcontactsupplier, name4);
+    reusable.click(close);
 }
 	
 	

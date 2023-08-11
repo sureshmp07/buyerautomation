@@ -28,7 +28,7 @@
     </classes>
   </test> <!-- Test -->
    <test  name="Test5">
-    <classes>
+    <classes> 
       
         <class name="testing.dev.BuyerPortal_FavouritePageTest"/>
     </classes>

@@ -54,7 +54,7 @@ public class BuyerPortalSignUpTest  extends BaseTest {
     	public void signUpPageTest5() throws IOException, InterruptedException 
     	{
     		
-        	signup.signUp01(properties.getProperty("l_email1"),properties.getProperty("l_first"),properties.getProperty("l_last"),properties.getProperty("l_username"),properties.getProperty("l_password3"),properties.getProperty("actual_p1"));
+        	signup.signUp01(properties.getProperty("buy_email"),properties.getProperty("l_first"),properties.getProperty("l_last"),properties.getProperty("l_username"),properties.getProperty("l_password3"),properties.getProperty("actual_p1"));
     	   
        
 	}
