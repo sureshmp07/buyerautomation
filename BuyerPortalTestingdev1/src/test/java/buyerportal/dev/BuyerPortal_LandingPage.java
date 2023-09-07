@@ -14,17 +14,17 @@ public class BuyerPortal_LandingPage {
 	
 	private By about=By.xpath("//*[text()='About']");
 	private By searchbox=By.xpath("//div[@role=\"combobox\"]/input[@class=\"z-index-hero w-full\"]");
-	private By searchclick =By.xpath("(//span[@class='MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root'])[2]");
-	private By foodclick=By.xpath("//div[text()='Popular:']/following::div[text()='Food']");
-	private By apparelclick=By.xpath("//div[text()='Popular:']/following::div[text()='Apparel']");
-	private By Beautyclick=By.xpath("//div[text()='Popular:']/following::div[text()='Beauty']");
-	private By Furnitureclick=By.xpath("//div[text()='Popular:']/following::div[text()='Furniture']");
+	private By searchclick =By.xpath("//p[text()='Search']");
+	private By foodclick=By.xpath("//div[text()='Food']");
+	private By apparelclick=By.xpath("//div[text()='Apparel']");
+	private By Beautyclick=By.xpath("//div[text()='Beauty']");
+	private By Furnitureclick=By.xpath("//div[text()='Furniture']");
 
 	private By categoriesleft=By.xpath("(//div[@class=\"left-arrow-category cursor-pointer\"])[1]");
 	private By categoriesright=By.xpath("(//div[@class=\"right-arrow-category cursor-pointer\"])[1]");
 	
 	private By foodandbeverage=By.xpath("//div[text()='Food and Beverage']");
-	private By textile=By.xpath("//div[text()=\"Textiles\"]");
+	private By textile=By.xpath("(//div[text()='Textiles'])[2]");
 	private By chemicals=By.xpath("(//div[text()=\"Chemicals\"])[2]");
 	private By Agriculture=By.xpath("(//div[text()=\"Agriculture\"])[2]");
 	private By machinery=By.xpath("(//div[text()=\"Machinery\"])[2]");
@@ -88,7 +88,7 @@ public class BuyerPortal_LandingPage {
 		
 		reusable.insertText(searchbox, name1);
 		reusable.click(searchclick);
-		//reusable.navigate(driver);
+		reusable.navigate(driver);
 	}
 		public void landingpage1() throws InterruptedException 
 		{		

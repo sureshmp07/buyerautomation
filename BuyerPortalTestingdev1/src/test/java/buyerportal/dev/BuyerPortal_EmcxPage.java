@@ -9,7 +9,7 @@ public class BuyerPortal_EmcxPage {
 	private WebDriver driver;
 	private ReusableFunction reusable;
 	
-	private By emcxicon=By.xpath("(//div[@role=\"button\"])[6]");
+	private By emcxicon=By.xpath("(//div[@id=\"root\"]//following::div[@role='button'])[6]");
 	private By transact1=By.xpath("(//div[text()='Transact Now'])[1]");
 	private By transact2=By.xpath("(//div[text()='Transact Now'])[2]");
 	private By transact3=By.xpath("(//div[text()='Transact Now'])[3]");

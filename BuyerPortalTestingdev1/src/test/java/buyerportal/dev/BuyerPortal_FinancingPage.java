@@ -31,13 +31,13 @@ public class BuyerPortal_FinancingPage {
 	private By next=By.xpath("//button[text()='Next']");
 	
 	private By tradedocument=By.xpath("//label[text()='Type of Trade Document*']");
-	private By tradedocumentpo=By.xpath("//ul/li[text()='Purchase Order']");
+	private By tradedocumentpo=By.xpath("//ul/li[text()='Proforma Invoice']");
 	private By tradedocumentfile=By.xpath("(//div[contains(text(),'Browse files')])[1]");
 	private By tradedocumenttotal=By.xpath("//input[@id=\"trade_total_amount\"]");
 	private By amounttofinance=By.xpath("//input[@id=\"request_amount\"]");
-	private By loanmonth=By.xpath("(//label[text()='Loan Tenure in Months*']/following::div[@role=\"button\"])[1]");
+	private By loanmonth=By.xpath("//div[@id=\"mui-component-select-tenure_in_months\"]");
 	private By loanmonthselect=By.xpath("//li[@data-value=\"4\"]");
-	private By SupportingDocuments=By.xpath("(//div[contains(text(),'Browse files')])[2]");
+	private By SupportingDocuments=By.xpath("//div[text()='Browse files (Pdf, Word, Excel, PPT, PNG, JPEG) 4MB maximum size per file']");
 	private By checkbox=By.xpath("//input[@type=\"checkbox\"]");
 	private By submit=By.xpath("//button[text()='Submit']");
 	
@@ -72,15 +72,16 @@ public class BuyerPortal_FinancingPage {
 	}
 	public void financePage2(String filepath,String s1,String s2) throws InterruptedException, AWTException
 	{   
-		reusable.click(tradedocument);
+		reusable.actions(tradedocument);
+		
 		reusable.click(tradedocumentpo);
-		reusable.click(tradedocumentfile);
+		reusable.actions(tradedocumentfile);
 		reusable.uploadrobot(filepath);
 		reusable.insertText(tradedocumenttotal, s1);
 		reusable.insertText(amounttofinance, s2);
-		reusable.click(loanmonth);
-		reusable.click(loanmonthselect);
-		reusable.click(SupportingDocuments);
+		reusable.clicking(loanmonth);
+		reusable.clicking(loanmonthselect);
+		reusable.actions(SupportingDocuments);
 		reusable.uploadrobot(filepath);
 		reusable.click(checkbox);
 		reusable.click(submit);

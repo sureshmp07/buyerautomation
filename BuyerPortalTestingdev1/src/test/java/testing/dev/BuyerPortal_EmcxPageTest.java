@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import org.testng.annotations.Test;
 
-public class BuyerPortal_EmcxPageTest extends BaseTest{
+public class BuyerPortal_EmcxPageTest extends BaseTest{ 
 	
 //	@Test	(priority=1)
 //	public void signInPageTest1() throws InterruptedException 

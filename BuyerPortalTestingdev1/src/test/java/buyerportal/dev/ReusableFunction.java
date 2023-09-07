@@ -13,6 +13,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
@@ -42,7 +43,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.remote.NewSessionPayload;
-import org.openqa.selenium.safari.SafariDriver.WindowType;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
@@ -135,7 +136,7 @@ public static  File file;
 		while(attempts<2) {
 		
 		try {
-        WebDriverWait wait = new WebDriverWait(driver, 30);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
         findElement(locator);
         wait.until(ExpectedConditions.presenceOfElementLocated(locator)).click();
         childtest.log(Status.PASS,"Clicked on ");
@@ -150,8 +151,72 @@ public static  File file;
 			}
 		return result;
 	}
-	
-	
+	public void clickOn(By locator) throws InterruptedException
+	{
+		Thread.sleep(3000);
+	    try {
+			WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
+			wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(locator)));
+			driver.findElement(locator).click();
+			System.out.println("clicked on");
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("unable to click");
+			e.printStackTrace();
+		}
+	   
+	}
+	//click by  javascript
+		public boolean click(By locator) throws InterruptedException 
+		{
+		
+	    Thread.sleep(3000);
+	    
+	    
+		boolean result=false;
+		int attempts=0;
+		while(attempts<2) {
+		
+
+		try {
+		WebElement element= driver.findElement(locator);
+		String s=element.getText();
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(7000));
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click()",element);
+		childtest.log(Status.PASS,"Clicked on "+s);
+		System.out.println("Clicked on "+s);
+		result=true;
+		break;
+		} catch (Exception e) {
+					// TODO Auto-generated catch block
+		childtest.log(Status.INFO,"element not found ,unable to click on");
+		System.out.println("element not found ,unable to click on");
+		}
+		attempts++;
+		}
+	    return result;
+		}
+		//clicking all elements
+		public void clickingallelements(By locator) throws InterruptedException {
+			Thread.sleep(2000);
+		try {
+			ArrayList<WebElement> element = (ArrayList<WebElement>) driver.findElements(locator);	
+			int count =0;
+			 for ( WebElement elements: element) { 
+			     System.out.println("element clicked");
+			     elements.click();
+			    count++;
+			 }
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("element not clicked");
+			e.printStackTrace();
+		}    
+		}
+		
 	//
 	public void imageverify(By locator) {
 	WebElement i = driver.findElement(locator);
@@ -166,55 +231,6 @@ public static  File file;
 		    	  childtest.log(Status.FAIL,"image not present ");
 		      }
 	}
-	//clicking all elements
-	public void clickingallelements(By locator) throws InterruptedException {
-		Thread.sleep(2000);
-	try {
-		ArrayList<WebElement> element = (ArrayList<WebElement>) driver.findElements(locator);	
-		int count =0;
-		 for ( WebElement elements: element) { 
-		     System.out.println("element clicked");
-		     elements.click();
-		    count++;
-		 }
-	} catch (Exception e) {
-		// TODO Auto-generated catch block
-		System.out.println("element not clicked");
-		e.printStackTrace();
-	}    
-	}
-	//click by  javascript
-	public boolean click(By locator) throws InterruptedException 
-	{
-	
-    Thread.sleep(3000);
-	
-	boolean result=false;
-	int attempts=0;
-	while(attempts<2) {
-	
-
-	try {
-	WebElement element= driver.findElement(locator);
-	String s=element.getText();
-	WebDriverWait wait = new WebDriverWait(driver, 7000);
-	wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-	JavascriptExecutor js = (JavascriptExecutor)driver;
-	js.executeScript("arguments[0].click()",element);
-	childtest.log(Status.PASS,"Clicked on "+s);
-	System.out.println("Clicked on "+s);
-	result=true;
-	break;
-	} catch (Exception e) {
-				// TODO Auto-generated catch block
-	childtest.log(Status.INFO,"element not found ,unable to click on");
-	System.out.println("element not found ,unable to click on");
-	}
-	attempts++;
-	}
-    return result;
-	}
-	
 	
 	//comparing actual and expected assertion
 	public String  assertion(By locator, String value) throws InterruptedException {
@@ -223,7 +239,7 @@ public static  File file;
     try {
 	WebElement click= driver.findElement(locator);
     String s=click.getText();
-	WebDriverWait wait = new WebDriverWait(driver, 7000);
+     WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(7000));
 	wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
   // String	expectedUrl = driver.getCurrentUrl();
 	Assert.assertEquals(s, value);
@@ -240,7 +256,7 @@ public static  File file;
     Thread.sleep(3000);
 	try {
 	
-	WebDriverWait wait = new WebDriverWait(driver, 7000);
+    WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(7000));
 	wait.until(ExpectedConditions.urlContains("https://wise.com/partner/proxtera?utm_source=proxtera&utm_medium=bank&utm_campaign=proxtera")); 
 	WebElement click= driver.findElement(locator);
 	String s=click.getText();
@@ -324,7 +340,7 @@ public static  File file;
 			//WebElement click= driver.findElement(locator);
 	String expected=click.getText();
 			//driver.switchTo().newWindow(WindowType.TAB);
-	WebDriverWait wait = new WebDriverWait(driver, 7000);
+	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(7000));
 	wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	Assert.assertEquals(true, click.isDisplayed());
 			//Boolean p = (Boolean) ((JavascriptExecutor)driver) .executeScript("return arguments[0].complete " + "&& typeof arguments[0].naturalWidth != \"undefined\" " + "&& arguments[0].naturalWidth > 0", i);
@@ -421,7 +437,7 @@ public   void assertion11 (By locator) throws IOException, InterruptedException{
 		//WebElement click= driver.findElement(locator);
 		String expected=click.getText();
 		//driver.switchTo().newWindow(WindowType.TAB);
-		WebDriverWait wait = new WebDriverWait(driver, 7000);
+	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(7000));
 		  wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 		Assert.assertEquals(true, click.isDisplayed());
 		//Boolean p = (Boolean) ((JavascriptExecutor)driver) .executeScript("return arguments[0].complete " + "&& typeof arguments[0].naturalWidth != \"undefined\" " + "&& arguments[0].naturalWidth > 0", i);
@@ -444,7 +460,7 @@ public   void assertion11 (By locator) throws IOException, InterruptedException{
 		Thread.sleep(3000);
 			WebElement ac= driver.findElement(locator);
 			String actual=ac.getText();
-			WebDriverWait wait = new WebDriverWait(driver, 7000);
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(7000));
 			  wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 			if(actual.equalsIgnoreCase(expected)) {
 				  
@@ -475,7 +491,7 @@ public  void uploadSendkeyss(By locator,String text)
 {
 
 try {
-	WebDriverWait wait = new WebDriverWait(driver, 30);
+ 	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
 	wait.until(ExpectedConditions.visibilityOf(element)); 
 	WebElement chooseFile = driver.findElement(locator);
 	chooseFile.sendKeys(text);
@@ -516,6 +532,7 @@ rb.keyRelease(KeyEvent.VK_V);
 // for pressing and releasing Enter
 rb.keyPress(KeyEvent.VK_ENTER);
 rb.keyRelease(KeyEvent.VK_ENTER);
+System.out.println("file uploaded");
 }
 //inserting new text	
 	public void insertText(By locator, String value) throws InterruptedException {
@@ -541,7 +558,7 @@ rb.keyRelease(KeyEvent.VK_ENTER);
 		try {
 			element=identifyElement(loctype,locvalue);
 			Actions action=new Actions(driver);
-			wait=new WebDriverWait(driver, 20);
+			wait=new WebDriverWait(driver,Duration.ofSeconds(20));
 			wait.until(ExpectedConditions.visibilityOf(element));
 			action.moveToElement(element).build().perform();
 		} catch (Exception e) {
@@ -606,7 +623,7 @@ public void selectCheckboxes(By locator) throws InterruptedException
 {
 	Thread.sleep(3000);
 	List <WebElement> listofItems = driver.findElements(locator);
-WebDriverWait wait = new WebDriverWait(driver, 20); //Wait time of 20 seconds
+    WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20)); //Wait time of 20 seconds
 
 for (int i=1; i<=listofItems.size(); i++)
 { 
@@ -695,30 +712,11 @@ for (int i=1; i<=listofItems.size(); i++)
 			break;
 					
 			}
-		    WebDriverWait wait=new WebDriverWait(driver,30);
+		    WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(30));
 		    wait.until(ExpectedConditions.invisibilityOfElementWithText(locator, value));
 				
 			}
 		    }
-		
-		
-			public void clickOn(By locator) throws InterruptedException
-			{
-				Thread.sleep(3000);
-			    try {
-					WebDriverWait wait = new WebDriverWait(driver, 30);
-					wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(locator)));
-					driver.findElement(locator).click();
-					System.out.println("clicked on");
-					Thread.sleep(3000);
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					System.out.println("unable to click");
-					e.printStackTrace();
-				}
-			   
-			}
-			
 
 	public String getTitle1(By locator) {
 		 return     driver.getTitle();
@@ -916,7 +914,7 @@ System.out.println(driver.switchTo().window(al.get(index)).getTitle());
 public static String getText() {
 	
 	String text=null;
-	wait=new WebDriverWait(driver, 30);
+	wait=new WebDriverWait(driver,Duration.ofSeconds(30));
 	wait.until(ExpectedConditions.visibilityOf(element));
 	text=element.getText();
 	System.out.println(text);
@@ -1009,7 +1007,12 @@ JavascriptExecutor js = (JavascriptExecutor) driver;
 js.executeScript("window.history.go(-1)");
   
 }
-
+public void refresh() throws InterruptedException {
+	// TODO Auto-generated method stub
+	Thread.sleep(3000);
+	driver.navigate().refresh();
+	System.out.println("page refreshed");
+}
 
 }
 

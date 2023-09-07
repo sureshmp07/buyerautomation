@@ -17,8 +17,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 //import org.testng.annotations.Test;
 import org.testng.annotations.Parameters;
@@ -36,29 +39,40 @@ public class DriverFactory {
 		  switch(properties.getProperty("browsername").toUpperCase()) {
 		  case"CHROME":
 			
-		    ChromeOptions options = new ChromeOptions();
+		    //ChromeOptions options = new ChromeOptions();
 		   
 //			options. addArguments("--disable-web-security");
 //			options.addArguments("--user-data-dir=C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data");
 //			options. addArguments("--allow-running-insecure-content");
 		
-			options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
-			WebDriverManager.chromedriver().setup();
-			driver=new ChromeDriver(options);  
+			//options.addArguments("--headless=new", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
+		//	WebDriverManager.chromedriver().setup(); 
+			
+			  ChromeOptions options = new ChromeOptions();
+			  options.addArguments("--headless=new");
+			  
+			  driver=new ChromeDriver(options);  
 		    break;
+		    
 		  case"EDGE":
+			  
+			//EdgeOptions options = new EdgeOptions();
+		    //options.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true); // Optional capability
+		    //options.setCapability("ms:edgeOptions", "--headless");
+			  
 			WebDriverManager.edgedriver().setup();
 			driver=new EdgeDriver();
 			break;
+			
 		  case"FF":
+			//FirefoxOptions firefoxOptions = new FirefoxOptions();
+		    //firefoxOptions.setHeadless(true);
+		   
 			WebDriverManager.firefoxdriver().setup();
 			driver=new FirefoxDriver();
 			break;
-		  case"IE":
-				WebDriverManager.iedriver().setup();
-				DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
-				caps.setCapability("ignoreZoomSetting", true);
-				driver = new InternetExplorerDriver(caps);
+			
+		  
 				
 		  }
 	  

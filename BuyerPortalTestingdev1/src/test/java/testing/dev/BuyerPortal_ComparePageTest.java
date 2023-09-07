@@ -8,7 +8,7 @@ import java.io.IOException;
 import org.testng.annotations.Test;
 
 
-public class BuyerPortal_ComparePageTest extends BaseTest{
+ public class BuyerPortal_ComparePageTest extends BaseTest{
 	
 	
 	
@@ -26,15 +26,8 @@ public class BuyerPortal_ComparePageTest extends BaseTest{
 		ProductComparePage.comparePage();
 		
 	}
-   @Test	(priority=3)
-	public void contactSupplier() throws InterruptedException
-	
-	{
-		
-		  contactSupplier.contact_individual(properties.getProperty("message"),properties.getProperty("assertcontactsupplier"));
-    	
-	}
-	@Test	(priority=4)
+   
+	@Test	(priority=3)
 	public void contactSupplier1() throws InterruptedException
 	
 	{
@@ -42,12 +35,12 @@ public class BuyerPortal_ComparePageTest extends BaseTest{
 		  contactSupplier.contact_business(properties.getProperty("compan_name"),properties.getProperty("taxid"),properties.getProperty("message"),properties.getProperty("assertcontactsupplier"));
     	
 	}
-	@Test	(priority=5)
+	@Test	(priority=4)
 	public void requestQuote() throws InterruptedException
 	
 	{
 		
-		  requestQuote.requestQuote(properties.getProperty("destinatio"),properties.getProperty("date1"),properties.getProperty("requiremnt"));
+		  requestQuote.requestQuote(properties.getProperty("quantiti"),properties.getProperty("destinatio"),properties.getProperty("date1"),properties.getProperty("requiremnt"));
     	 
  		}
 //@Test	(priority=6)

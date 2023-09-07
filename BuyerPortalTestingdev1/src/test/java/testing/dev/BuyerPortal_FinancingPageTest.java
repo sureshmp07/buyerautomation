@@ -28,6 +28,7 @@ public class BuyerPortal_FinancingPageTest extends BaseTest {
 	   financepage.financePage1(properties.getProperty("detailsname"),properties.getProperty("taxid"), properties.getProperty("registrationaddress"), properties.getProperty("detailsstate"), properties.getProperty("detailscity"), properties.getProperty("countername"), properties.getProperty("countertaxid"), properties.getProperty("counterregistrationaddress"),properties.getProperty("countercity"));
 		
 	}
+   
    @Test(priority=3)
 	public void financingpage_TradeDocuments() throws InterruptedException, AWTException
 	{

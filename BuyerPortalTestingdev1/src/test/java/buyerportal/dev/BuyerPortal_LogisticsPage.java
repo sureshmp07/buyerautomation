@@ -16,7 +16,7 @@ public class BuyerPortal_LogisticsPage {
 	private By length=By.xpath("//input[@name=\"length\"]");
 	private By height=By.xpath("//input[@name=\"height\"]");
 	private By weight=By.xpath("//input[@name=\"weight\"]");
-	private By shipmentdate=By.xpath("//input[@placeholder=\"MM/DD/YYYY\"]");
+	private By shipmentdate=By.xpath("//input[@placeholder=\"DD-MM-YYYY\"]");
 	
 	private By button=By.xpath("//button[text()='Back']");
 	private By next=By.xpath("//button[text()='Next']");

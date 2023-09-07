@@ -13,9 +13,12 @@ public class BuyerPortal_ProductComparePage {
 	private By beauty=By.xpath("//div[text()='Beauty']");
 	
 	
-	private By comapareclick1=By.xpath("(//input[@type=\"checkbox\"])[1]");
-	private By comapareclick2=By.xpath("(//input[@type=\"checkbox\"])[2]");
-	private By comapareclic3=By.xpath("(//input[@type=\"checkbox\"])[3]");
+	private By comapareclick1=By.xpath("(//input[@type=\"checkbox\"])[2]");
+	private By comapareclick2=By.xpath("(//input[@type=\"checkbox\"])[3]");
+	private By comapareclic3=By.xpath("(//input[@type=\"checkbox\"])[4]");
+	
+	private By ondc=By.xpath("(//input[@type=\"checkbox\"])[1]");
+
 	
 	private By searchclick =By.xpath("(//span[@class='MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root'])[2]");
 	private By foodclick=By.xpath("//div[text()='Popular:']/following::div[text()='Food']");
@@ -32,9 +35,14 @@ public class BuyerPortal_ProductComparePage {
 
 	public void comparePage() throws InterruptedException
 	{   
+		
+		
 		reusable.click(proxteraicon);
 		Thread.sleep(3000);
 		reusable.click(beauty);
+		Thread.sleep(3000);
+		//reusable.click(ondc);
+		reusable.refresh();
 		Thread.sleep(3000);
 		reusable.click(comapareclick1);
 		Thread.sleep(3000);
