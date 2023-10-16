@@ -39,7 +39,7 @@ public class DriverFactory {
 		  switch(properties.getProperty("browsername").toUpperCase()) {
 		  case"CHROME":
 			
-		    //ChromeOptions options = new ChromeOptions();
+		  //  ChromeOptions options = new ChromeOptions();
 		   
 //			options. addArguments("--disable-web-security");
 //			options.addArguments("--user-data-dir=C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data");
@@ -49,7 +49,7 @@ public class DriverFactory {
 		//	WebDriverManager.chromedriver().setup(); 
 			
 			  ChromeOptions options = new ChromeOptions();
-			  options.addArguments("--headless=new");
+			  options.addArguments("--headless=new","--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
 			  
 			  driver=new ChromeDriver(options);  
 		    break;

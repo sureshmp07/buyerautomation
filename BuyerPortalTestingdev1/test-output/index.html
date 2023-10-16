@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Dell\AppData\Local\Temp\testng-eclipse--837007961\testng-customsuite.xml</span>
+                    <span>C:\Users\Dell\AppData\Local\Temp\testng-eclipse-31780508\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,12 +104,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testing.dev.BuyerPortal_LogisticsPageTest" class="method navigator-link" hash-for-method="logisticspage">logisticspage</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="testing.dev.BuyerPortal_BusinessOnboardingPageTest" class="method navigator-link" hash-for-method="contactDetails">contactDetails</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testing.dev.BuyerPortal_LogisticsPageTest" class="method navigator-link" hash-for-method="signUpPageTest1">signUpPageTest1</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="testing.dev.BuyerPortal_BusinessOnboardingPageTest" class="method navigator-link" hash-for-method="otherInformation">otherInformation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="testing.dev.BuyerPortal_BusinessOnboardingPageTest" class="method navigator-link" hash-for-method="signUpPageTest1">signUpPageTest1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -127,14 +132,21 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testing.dev.BuyerPortal_LogisticsPageTest</span>
+              <span class="class-name">testing.dev.BuyerPortal_BusinessOnboardingPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="logisticspage">
-                  </a> <!-- logisticspage -->
-                  <span class="method-name">logisticspage</span>
+                  <a name="contactDetails">
+                  </a> <!-- contactDetails -->
+                  <span class="method-name">contactDetails</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="otherInformation">
+                  </a> <!-- otherInformation -->
+                  <span class="method-name">otherInformation</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -149,7 +161,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Dell\AppData\Local\Temp\testng-eclipse--837007961\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Dell\AppData\Local\Temp\testng-eclipse-31780508\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -158,7 +170,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testing.dev.BuyerPortal_LogisticsPageTest&quot;/&gt;
+      &lt;class name=&quot;testing.dev.BuyerPortal_BusinessOnboardingPageTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -198,20 +210,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'logisticspage')
-data.setCell(0, 2, 'testing.dev.BuyerPortal_LogisticsPageTest')
-data.setCell(0, 3, 60752);
+data.setCell(0, 1, 'otherInformation')
+data.setCell(0, 2, 'testing.dev.BuyerPortal_BusinessOnboardingPageTest')
+data.setCell(0, 3, 655558);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'signUpPageTest1')
-data.setCell(1, 2, 'testing.dev.BuyerPortal_LogisticsPageTest')
-data.setCell(1, 3, 56925);
+data.setCell(1, 1, 'contactDetails')
+data.setCell(1, 2, 'testing.dev.BuyerPortal_BusinessOnboardingPageTest')
+data.setCell(1, 3, 201722);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'signUpPageTest1')
+data.setCell(2, 2, 'testing.dev.BuyerPortal_BusinessOnboardingPageTest')
+data.setCell(2, 3, 52251);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 15 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -237,42 +253,54 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testing.dev.BuyerPortal_LogisticsPageTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testing.dev.BuyerPortal_BusinessOnboardingPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">setReports</span>
-                <span class="method-start">7092 ms</span>
+                <span class="method-start">4884 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">testName(public void testing.dev.BuyerPortal_LogisticsPageTest.signUpPageTest1() throws java.io.IOException,j...)</span>
-                <span class="method-start">7219 ms</span>
+                <span class="method-name">testName(public void testing.dev.BuyerPortal_BusinessOnboardingPageTest.signUpPageTest1() throws java.io.IOEx...)</span>
+                <span class="method-start">5032 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">signUpPageTest1</span>
-                <span class="method-start">7221 ms</span>
+                <span class="method-start">5035 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=signUpPageTest1 status=SUCCESS method=BuyerPortal_LogisticsPageTest.signUpPageTest1...)</span>
-                <span class="method-start">64151 ms</span>
+                <span class="method-name">tearDown([TestResult name=signUpPageTest1 status=SUCCESS method=BuyerPortal_BusinessOnboardingPageTest.signUp...)</span>
+                <span class="method-start">57288 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">contactDetails</span>
+                <span class="method-start">57291 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">testName(public void testing.dev.BuyerPortal_BusinessOnboardingPageTest.contactDetails() throws java.lang.Int...)</span>
+                <span class="method-start">57291 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=contactDetails status=SUCCESS method=BuyerPortal_BusinessOnboardingPageTest.contact...)</span>
+                <span class="method-start">259016 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">testName(public void testing.dev.BuyerPortal_LogisticsPageTest.logisticspage() throws java.lang.InterruptedEx...)</span>
-                <span class="method-start">64156 ms</span>
+                <span class="method-name">testName(public void testing.dev.BuyerPortal_BusinessOnboardingPageTest.otherInformation() throws java.lang.I...)</span>
+                <span class="method-start">259019 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">logisticspage</span>
-                <span class="method-start">64156 ms</span>
+                <span class="method-name">otherInformation</span>
+                <span class="method-start">259020 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=logisticspage status=SUCCESS method=BuyerPortal_LogisticsPageTest.logisticspage()[p...)</span>
-                <span class="method-start">124909 ms</span>
+                <span class="method-name">tearDown([TestResult name=otherInformation status=SUCCESS method=BuyerPortal_BusinessOnboardingPageTest.other...)</span>
+                <span class="method-start">914579 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">closeReport</span>
-                <span class="method-start">124911 ms</span>
+                <span class="method-start">914581 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

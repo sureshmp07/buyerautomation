@@ -94,8 +94,11 @@ public static  File file;
 	{
 	Thread.sleep(3000);
 	try {
-		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
 		WebElement element=findElement(locator);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		//WebElement element=findElement(locator);
 		element.sendKeys(text);
 		System.out.println("Enter a value : " + text) ;
 		childtest.log(Status.PASS,"Enter a value : "+ text);
@@ -217,7 +220,7 @@ public static  File file;
 		}    
 		}
 		
-	//
+	
 	public void imageverify(By locator) {
 	WebElement i = driver.findElement(locator);
 		      
@@ -428,10 +431,8 @@ public static  File file;
 		return message;
 		}
 	
-public   void assertion11 (By locator) throws IOException, InterruptedException{
+public void assertion11 (By locator) throws IOException, InterruptedException{
 	
-	
-	 
 	 WebElement click= driver.findElement(locator);
      
 		//WebElement click= driver.findElement(locator);

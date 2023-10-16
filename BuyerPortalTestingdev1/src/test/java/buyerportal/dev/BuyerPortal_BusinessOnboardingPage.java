@@ -11,7 +11,7 @@ public class BuyerPortal_BusinessOnboardingPage {
 	private WebDriver driver;
 	private ReusableFunction reusable;
 	
-	private By businessbtn=By.xpath("(//div[@class='MuiListItemIcon-root css-1ddsiuw-MuiListItemIcon-root'])[2]");
+	private By businessbtn=By.xpath("(//div[@role=\"button\"])[2]");
 	
 	private By upgrade=By.xpath("//button[text()='Upgrade']");
 	
@@ -21,8 +21,8 @@ public class BuyerPortal_BusinessOnboardingPage {
 	private By phone=By.xpath("//input[@id=\"phone\"]");
 	private By verify=By.xpath("//div[text()='Verify']");
 	private By otp=By.xpath("//input[@autocomplete=\"one-time-code\"]");
-	private By company_legal=By.xpath("(//input[@id=\"corporate_name\"])[2]");
-	private By country_incorp=By.xpath("(//input[@id=\"country_of_incorporation\"])[2]");
+	private By company_legal=By.xpath("//input[@id=\"corporate_name\"]");
+	private By country_incorp=By.xpath("//input[@id=\"country_of_incorporation\"]");
 	private By designation=By.xpath("//input[@id=\"designation\"]");
 	private By checkbox=By.xpath("(//input[@type=\"checkbox\"])[2]");
 	private By next=By.xpath("(//button[text()='Next'])[2]");
@@ -42,10 +42,10 @@ public class BuyerPortal_BusinessOnboardingPage {
 //	private By entityname=By.xpath("//input[@id=\"corporate_name\"]");
 //	private By countryofincorporation=By.xpath("//input[@id=\"country_of_incorporation\"]");
 	private By CountryofOperation=By.xpath("//input[@id=\"country_of_operation\"]");
-	private By tin=By.xpath("//input[@id=\"tax_id\"]");
+	private By tin=By.xpath("//input[@name=\"tax_id\"]");
 	private By Registrationcheckbox=By.xpath("//span[text()='Registration Number same as Tax ID']");
-	private By EntityRegistrationNumber=By.xpath("//input[@id=\\\"registration_number\\\"]");
-	private By doi=By.xpath("//input[@id=\"date_of_incorporation\"]");
+	private By EntityRegistrationNumber=By.xpath("//input[@name=\"registration_number\"]");
+	private By doi=By.xpath("//input[@name=\"date_of_incorporation\"]");
 	private By companywebsite=By.xpath("//input[@id=\"website\"]");
 	private By PrimaryIndustry=By.xpath("(//input[@aria-autocomplete=\"list\"])[4]");
 	private By SecondaryIndustry=By.xpath("(//input[@role=\"combobox\"])[5]");
@@ -60,7 +60,7 @@ public class BuyerPortal_BusinessOnboardingPage {
 	
 //	private By updatebutton=By.xpath("//button[text()='Update']");
 //	
-	private By location=By.xpath("//input[@id='address']");
+	private By location=By.xpath("//div/div[@name=\"address\"]");
 	private By city=By.xpath("//input[@id=\"city\"]");
 	private By	backbutton=By.xpath("//button[text()='Back']");
 	private By	nextbutton1=By.xpath("//button[text()='Next']");

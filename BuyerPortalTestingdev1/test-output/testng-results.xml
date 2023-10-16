@@ -1,77 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-07T21:11:13 IST" name="Default suite" finished-at="2023-09-07T21:13:18 IST" duration-ms="125606">
+  <suite started-at="2023-10-16T17:31:48 IST" name="Default suite" finished-at="2023-10-16T17:47:03 IST" duration-ms="914992">
     <groups>
     </groups>
-    <test started-at="2023-09-07T21:11:13 IST" name="Default test" finished-at="2023-09-07T21:13:18 IST" duration-ms="125606">
-      <class name="testing.dev.BuyerPortal_LogisticsPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testing.dev.BuyerPortal_LogisticsPageTest@6c64cb25]" started-at="2023-09-07T21:11:13 IST" name="setUp" finished-at="2023-09-07T21:11:20 IST" duration-ms="7078" status="PASS">
+    <test started-at="2023-10-16T17:31:48 IST" name="Default test" finished-at="2023-10-16T17:47:03 IST" duration-ms="914992">
+      <class name="testing.dev.BuyerPortal_BusinessOnboardingPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6ae5aa72]" started-at="2023-10-16T17:31:48 IST" name="setUp" finished-at="2023-10-16T17:31:53 IST" duration-ms="4872" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setReports()[pri:0, instance:testing.dev.BuyerPortal_LogisticsPageTest@6c64cb25]" started-at="2023-09-07T21:11:20 IST" name="setReports" finished-at="2023-09-07T21:11:20 IST" duration-ms="119" status="PASS">
+        <test-method is-config="true" signature="setReports()[pri:0, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6ae5aa72]" started-at="2023-10-16T17:31:53 IST" name="setReports" finished-at="2023-10-16T17:31:53 IST" duration-ms="137" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setReports -->
-        <test-method is-config="true" signature="testName(java.lang.reflect.Method)[pri:0, instance:testing.dev.BuyerPortal_LogisticsPageTest@6c64cb25]" started-at="2023-09-07T21:11:20 IST" name="testName" finished-at="2023-09-07T21:11:20 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="testName(java.lang.reflect.Method)[pri:0, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6ae5aa72]" started-at="2023-10-16T17:31:53 IST" name="testName" finished-at="2023-10-16T17:31:53 IST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testing.dev.BuyerPortal_LogisticsPageTest.signUpPageTest1() throws java.io.IOException,java.lang.InterruptedException]]>
+                <![CDATA[public void testing.dev.BuyerPortal_BusinessOnboardingPageTest.signUpPageTest1() throws java.io.IOException,java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testName -->
-        <test-method signature="signUpPageTest1()[pri:1, instance:testing.dev.BuyerPortal_LogisticsPageTest@6c64cb25]" started-at="2023-09-07T21:11:20 IST" name="signUpPageTest1" finished-at="2023-09-07T21:12:17 IST" duration-ms="56925" status="PASS">
+        <test-method signature="signUpPageTest1()[pri:1, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6ae5aa72]" started-at="2023-10-16T17:31:53 IST" name="signUpPageTest1" finished-at="2023-10-16T17:32:45 IST" duration-ms="52251" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signUpPageTest1 -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testing.dev.BuyerPortal_LogisticsPageTest@6c64cb25]" started-at="2023-09-07T21:12:17 IST" name="tearDown" finished-at="2023-09-07T21:12:17 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6ae5aa72]" started-at="2023-10-16T17:32:45 IST" name="tearDown" finished-at="2023-10-16T17:32:45 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=signUpPageTest1 status=SUCCESS method=BuyerPortal_LogisticsPageTest.signUpPageTest1()[pri:1, instance:testing.dev.BuyerPortal_LogisticsPageTest@6c64cb25] output={null}]]]>
+                <![CDATA[[TestResult name=signUpPageTest1 status=SUCCESS method=BuyerPortal_BusinessOnboardingPageTest.signUpPageTest1()[pri:1, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6ae5aa72] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="testName(java.lang.reflect.Method)[pri:0, instance:testing.dev.BuyerPortal_LogisticsPageTest@6c64cb25]" started-at="2023-09-07T21:12:17 IST" name="testName" finished-at="2023-09-07T21:12:17 IST" duration-ms="0" status="PASS">
+        <test-method signature="contactDetails()[pri:4, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6ae5aa72]" started-at="2023-10-16T17:32:45 IST" name="contactDetails" finished-at="2023-10-16T17:36:07 IST" duration-ms="201722" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contactDetails -->
+        <test-method is-config="true" signature="testName(java.lang.reflect.Method)[pri:0, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6ae5aa72]" started-at="2023-10-16T17:32:45 IST" name="testName" finished-at="2023-10-16T17:32:45 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testing.dev.BuyerPortal_LogisticsPageTest.logisticspage() throws java.lang.InterruptedException]]>
+                <![CDATA[public void testing.dev.BuyerPortal_BusinessOnboardingPageTest.contactDetails() throws java.lang.InterruptedException,java.awt.AWTException,java.io.IOException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testName -->
-        <test-method signature="logisticspage()[pri:2, instance:testing.dev.BuyerPortal_LogisticsPageTest@6c64cb25]" started-at="2023-09-07T21:12:17 IST" name="logisticspage" finished-at="2023-09-07T21:13:17 IST" duration-ms="60752" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logisticspage -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testing.dev.BuyerPortal_LogisticsPageTest@6c64cb25]" started-at="2023-09-07T21:13:17 IST" name="tearDown" finished-at="2023-09-07T21:13:17 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6ae5aa72]" started-at="2023-10-16T17:36:07 IST" name="tearDown" finished-at="2023-10-16T17:36:07 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=logisticspage status=SUCCESS method=BuyerPortal_LogisticsPageTest.logisticspage()[pri:2, instance:testing.dev.BuyerPortal_LogisticsPageTest@6c64cb25] output={null}]]]>
+                <![CDATA[[TestResult name=contactDetails status=SUCCESS method=BuyerPortal_BusinessOnboardingPageTest.contactDetails()[pri:4, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6ae5aa72] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="closeReport()[pri:0, instance:testing.dev.BuyerPortal_LogisticsPageTest@6c64cb25]" started-at="2023-09-07T21:13:17 IST" name="closeReport" finished-at="2023-09-07T21:13:18 IST" duration-ms="689" status="PASS">
+        <test-method is-config="true" signature="testName(java.lang.reflect.Method)[pri:0, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6ae5aa72]" started-at="2023-10-16T17:36:07 IST" name="testName" finished-at="2023-10-16T17:36:07 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testing.dev.BuyerPortal_BusinessOnboardingPageTest.otherInformation() throws java.lang.InterruptedException,java.awt.AWTException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testName -->
+        <test-method signature="otherInformation()[pri:5, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6ae5aa72]" started-at="2023-10-16T17:36:07 IST" name="otherInformation" finished-at="2023-10-16T17:47:03 IST" duration-ms="655558" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherInformation -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6ae5aa72]" started-at="2023-10-16T17:47:03 IST" name="tearDown" finished-at="2023-10-16T17:47:03 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=otherInformation status=SUCCESS method=BuyerPortal_BusinessOnboardingPageTest.otherInformation()[pri:5, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6ae5aa72] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="closeReport()[pri:0, instance:testing.dev.BuyerPortal_BusinessOnboardingPageTest@6ae5aa72]" started-at="2023-10-16T17:47:03 IST" name="closeReport" finished-at="2023-10-16T17:47:03 IST" duration-ms="406" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeReport -->
-      </class> <!-- testing.dev.BuyerPortal_LogisticsPageTest -->
+      </class> <!-- testing.dev.BuyerPortal_BusinessOnboardingPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
